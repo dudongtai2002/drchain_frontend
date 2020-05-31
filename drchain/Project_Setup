@@ -11,7 +11,7 @@ https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
 第一步： 安装react脚手架 (在terminal里面找到当前folder： drchain_frontend/drchain)
 * terminal:  npm install -g create-react-app
-* terminal:  create-react-app  —version  （查看一下版本，出来的话就是安装成功了）
+* terminal:  create-react-app  —V （查看一下版本，出来的话就是安装成功了）
 * terminal:  create-react-app drchain   (初始化drchain的项目， 需要些时间）
     * 这一步之后，drchain的文件夹应该就是有了
 * terminal:  yarn start  (启动项目就用这个command)
