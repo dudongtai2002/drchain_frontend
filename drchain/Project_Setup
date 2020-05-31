@@ -1,0 +1,27 @@
+在环境搭建前，确保电脑上已经安装了npm（也可以直接安装一个最新的node.js, 里面已经包含了最新的npm）。下面是安装npm的网站链接
+https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+
+
+如果已经安装好了npm，可以直接在当前目录下面运行 sudo yarn install。这个会自动下载package.json里面已经有的本地还没有的package。完成之后，当前目录下运行 yarn start. 如果网站可以出来，那就是成功了。如果没成功，那就从第二步开始（第一步省略，已经配置好了）一个一个安装，然后再yarn start。
+
+用IDE打开folder的时候，要打开的是drchain,不是drchain_frontend
+
+
+(MAC步骤）
+
+第一步： 安装react脚手架 (在terminal里面找到当前folder： drchain_frontend/drchain)
+* terminal:  npm install -g create-react-app
+* terminal:  create-react-app  —version  （查看一下版本，出来的话就是安装成功了）
+* terminal:  create-react-app drchain   (初始化drchain的项目， 需要些时间）
+    * 这一步之后，drchain的文件夹应该就是有了
+* terminal:  yarn start  (启动项目就用这个command)
+
+第二步： 安装插件，less文件加载配置
+
+* terminal:  yarn add react-router
+* terminal:  yarn add react-router-dom
+* terminal:  yarn add axios   (用来随后使用ajax接收数据）
+* terminal:  yarn add less-loader
+* terminal: yarn add antd@3.26.16  (might take a while)
+* terminal: sudo yarn add babel-plugin-import  (实现按需加在antd）
+* terminal: sudo yarn add less@^2.7.3
