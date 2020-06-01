@@ -1,14 +1,12 @@
 import React from 'react';
-import './App.css';
+import { render } from '@testing-library/react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Welcome to Dr.Chain</p>
-      </header>
-    </div>
-  );
+export default class App extends React.Component{
+  render(){
+    return (
+      <div>
+        {this.props.children}
+      </div>
+    );
+  };
 }
-
-export default App;
