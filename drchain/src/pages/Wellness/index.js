@@ -2,20 +2,14 @@ import React from 'react'
 import './index.less'
 import {Button, Card, Col, Dropdown, Form, Icon, Menu, Modal, Row, Table} from 'antd'
 import {
-    G2,
     Chart,
     Geom,
     Axis,
     Tooltip,
-    Coord,
-    Label,
     Legend,
-    View,
-    Guide,
-    Shape,
-    Facet,
-    Util
   } from "bizcharts";
+
+
 
 export default class Wellness extends React.Component {
 
@@ -49,12 +43,6 @@ export default class Wellness extends React.Component {
     };
 
     render(){
-
-
-
-
-
-
         const category1 = (this.state.catagoryVisibility[0]?
             (<div>
                 <span className="title">Weekly Blood Presure <Icon type="caret-down" /></span>
@@ -170,7 +158,6 @@ class HeaderForm extends React.Component{
                 </Menu.Item>
             )
         });
-
         const skeys = this.getSelectedMenuKeys();
         const menu = (
             <Menu selectedKeys       ={skeys}
@@ -179,8 +166,6 @@ class HeaderForm extends React.Component{
                 {menus}
             </Menu>
         );
-    
-
         return (
             <div className="header">
                 <span className="header-title"><b>Wellness Data</b></span>
@@ -197,18 +182,15 @@ class HeaderForm extends React.Component{
                 >
                 </Modal>
             </div>
-            
         );
     };
 }
 HeaderForm = Form.create({})(HeaderForm);
 
 
-
-
 class Curved extends React.Component {
     render() {
-      const data = [
+        const data = [
         {
             day: "Sat",
             type: "Systolic",
@@ -279,116 +261,113 @@ class Curved extends React.Component {
             type: "Diastolic",
             value: 87
         },
-      ];
-      const cols = {
-        day: {
-          range: [0, 1]
-        }
-      };
-      return (
-        <div>
-          <Chart height={270} data={data} scale={cols} forceFit>
-            <Legend />
-            <Axis name="days" />
-            <Axis
-              name="pressure"
-            />
-            <Tooltip
-              crosshairs={{
-                type: "y"
-              }}
-            />
-            <Geom
-              type="line"
-              position="day*value"
-              size={2}
-              color={"type"}
-              shape={"smooth"}
-            />
-            <Geom
-              type="point"
-              position="day*value"
-              size={4}
-              shape={"circle"}
-              color={"type"}
-              style={{
-                stroke: "#fff",
-                lineWidth: 1
-              }}
-            />
-          </Chart>
-        </div>
-      );
+        ];
+        const cols = {
+            day: {
+                range: [0, 1]
+            }
+        };
+        return (
+            <div>
+                <Chart height={270} data={data} scale={cols} forceFit>
+                    <Legend />
+                    <Axis name="days" />
+                    <Axis
+                        name="pressure"
+                    />
+                    <Tooltip
+                        crosshairs={{
+                        type: "y"
+                    }}
+                    />
+                    <Geom
+                        type="line"
+                        position="day*value"
+                        size={2}
+                        color={"type"}
+                        shape={"smooth"}
+                    />
+                    <Geom
+                        type="point"
+                        position="day*value"
+                        size={4}
+                        shape={"circle"}
+                        color={"type"}
+                        style={{
+                            stroke: "#fff",
+                            lineWidth: 1
+                        }}
+                    />
+                </Chart>
+             </div>
+        );
     }
   }
 
 
   class Stress extends React.Component {
-    render() {
-      const data = [
-        {
-            day: "Sat",
-            value: 108
-        },
-        {
-            day: "Sun",
-            value: 110
-        },
-        
-        {
-            day: "Mon",
-            value: 116
-        },
-        {
-            day: "Tue",
-            value: 115
-        },
-        {
-            day: "Wed",
-            value: 105
-        },
-        {
-            day: "Thu",
-            value: 115
-        },
-        {
-            day: "Fri",
-            value: 113
-        },
-      ];
-      const cols = {
-        day: {
-          range: [0, 1]
-        },
-        value: {
-            min:  50
-        }
-      };
-      return (
-        <div>
-          <Chart height={270} data={data} scale={cols} forceFit>
-            <Legend />
-            <Axis name="days" />
-            <Axis
-              name="stresslevel"
-            />
-            <Tooltip
-              crosshairs={{
-                type: "y"
-              }}
-            />
-            <Geom
-              type="area"
-              position="day*value"
-            />
-            <Geom
-              type="line"
-              position="day*value"
-              size={2}
-            />
-          </Chart>
-        </div>
-      );
+        render() {
+            const data = [
+            {
+                day: "Sat",
+                value: 108
+            },
+            {
+                day: "Sun",
+                value: 110
+            },
+            {
+                day: "Mon",
+                value: 116
+            },
+            {
+                day: "Tue",
+                value: 115
+            },
+            {
+                day: "Wed",
+                value: 105
+            },
+            {
+                day: "Thu",
+                value: 115
+            },
+            {
+                day: "Fri",
+                value: 113
+            },
+        ];
+        const cols = {
+            day: {
+                range: [0, 1]
+            },
+            value: {
+                min:  50
+            }
+        };
+        return (
+            <div>
+                <Chart height={270} data={data} scale={cols} forceFit>
+                <Legend />
+                <Axis name="days" />
+                <Axis
+                    name="stresslevel"
+                />
+                <Tooltip
+                    crosshairs={{type: "y"}}
+                />
+                <Geom
+                    type="area"
+                    position="day*value"
+                />
+                <Geom
+                    type="line"
+                    position="day*value"
+                    size={2}
+                />
+                </Chart>
+            </div>
+        );
     }
   }
 

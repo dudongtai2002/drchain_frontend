@@ -4,6 +4,7 @@ import App from './App'
 import Admin from './admin'
 import Record from './pages/Record/index'
 import Wellness from './pages/Wellness/index'
+import Account from './pages/Account/index'
 export default class IRouter extends React.Component {
 
     render() {
@@ -15,6 +16,7 @@ export default class IRouter extends React.Component {
                             <Switch>
                                 <Route path='/admin/record' component={Record}></Route>
                                 <Route path='/admin/wellness' component={Wellness}></Route>
+                                <Route path='/admin/account' component={Account}></Route>
                             </Switch>
                         </Admin>
                     }></Route>
