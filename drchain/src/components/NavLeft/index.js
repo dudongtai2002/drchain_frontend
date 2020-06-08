@@ -27,8 +27,8 @@ export default class NavLeft extends React.Component {
                         <Menu.Item title="Medical Record" key = "/admin/record">
                             <NavLink className="link-style" to="/admin/record"><Icon type="form" style={{fontSize: '16px',color:'white'}} />  Medical Record</NavLink>
                         </Menu.Item>
-                        <Menu.Item title="Wellness Data" key="/admin/data">
-                            <NavLink className="link-style" to="/admin/data"><Icon type="fund" style={{fontSize: '18px',color:'white'}}/>  Wellness Data</NavLink>
+                        <Menu.Item title="Wellness Data" key="/admin/wellness">
+                            <NavLink className="link-style" to="/admin/wellness"><Icon type="fund" style={{fontSize: '18px',color:'white'}}/>  Wellness Data</NavLink>
                         </Menu.Item>
                         <Menu.Item title="Account Setting" key="/admin/account">
                             <NavLink className="link-style" to="/admin/account"><Icon type="setting" style={{fontSize: '18px',color:'white'}} />  Account Setting</NavLink>
