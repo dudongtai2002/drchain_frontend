@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.less'
-import {Card, Button, Icon, Form, Table, Modal, Upload} from 'antd'
+import {Card, Button, Icon, Form, Table, Modal, Upload, message} from 'antd'
 
 const {Dragger} = Upload;
 
@@ -61,7 +61,7 @@ export default class Record extends React.Component {
                     <HeaderForm />
                 </Card>
                 <Card className="cardWrap" bordered={false} style={{border:"transparent"}}>
-                    <Table 
+                    <Table
                         loading={false}
                         dataSource={dataSource}
                         columns={columns}
@@ -92,6 +92,8 @@ class HeaderForm extends React.Component{
                 visible: false,
                 confirmLoading: false,
             });
+            message.success("You files have been successfully uploaded.");
+            window.location.href = '/#/admin/details';
         }, 1000);
     }
     handleCancel = () => {

@@ -1,0 +1,70 @@
+.clearfix{
+    &::after{
+        content:' ';
+        clear:both;
+        display: block;
+        visibility: hidden;
+    }
+}
+.container {
+    height: calc(100vh);
+    overflow: auto;
+    background-color: #eff2fa;
+    .card-wrap {
+        background-color: transparent;
+        border-bottom: 1px solid #dddfe7;
+        margin: 15px 25px;
+    }
+    .card-wrap-upload {
+        background-color: transparent;
+        border: 1px solid #a3beeb;
+        border-radius: 10px;
+    }
+    .returnBtn {
+        border: none;
+        background-color: transparent;
+        font-size: 22px;
+        font-weight: bold;
+        padding-left: 0;
+    }
+    .uploadBtn {
+        width: 80px;
+        height: 80px;
+        border: 1px dashed #a3beeb;
+        background-color: transparent;
+    }
+    .card-title {
+        color: #5789db;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .upload-file-type {
+        float: left;
+        color: #5789db;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+    .upload-file-content {
+        float: left;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .upload-file-delete {
+        float: right;
+        color: gray;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 24px;
+        .upload-delete {
+            margin-left: 15px;
+        }
+    }
+    //get rid of clicking animation
+    button[ant-click-animating-without-extra-node]:after {
+        border: 0 none;
+        opacity: 0;
+        animation:none 0 ease 0 1 normal;
+    }
+}
