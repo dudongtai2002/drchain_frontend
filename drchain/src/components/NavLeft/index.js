@@ -27,7 +27,6 @@ export default class NavLeft extends React.Component {
                     <div className="loading-status">
                         2/6 completed
                     </div>
-                    <div>
                     <Menu className="menu">
                         <Menu.Item title="Medical Record" key = "/admin/record">
                             <NavLink className="link-style" to="/admin/record">
@@ -66,8 +65,6 @@ export default class NavLeft extends React.Component {
                             </NavLink>
                         </Menu.Item>
                     </Menu>
-                    </div>
-                    
             </div>
         );
     }
