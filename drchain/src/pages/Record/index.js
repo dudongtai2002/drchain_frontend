@@ -1,13 +1,122 @@
 import React from 'react'
 import './index.less'
-import {Card, Button, Icon, Form, Table, Modal, Upload, message} from 'antd'
-
-const {Dragger} = Upload;
-
+import {Card, Button, Icon, Form, Table, message} from 'antd'
+import PageHeader from './PageHeader'
 export default class Record extends React.Component {
-    
+    constructor(props) {
+        super(props);
+        this.state= {
+            dataSource: []
+        };
+    }
+    componentDidMount() {
+        const dataSource = [
+            {  
+                Flag: "true",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            },
+            {
+                Flag: "false",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            },
+            {
+                Flag: "true",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            },
+            {
+                Flag: "false",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            },
+            {
+                Flag: "false",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            },
+            {
+                Flag: "true",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            }
+            ,
+            {
+                Flag: "true",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            }
+            ,
+            {
+                Flag: "false",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            }
+            ,
+            {
+                Flag: "true",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            }
+            ,
+            {
+                Flag: "true",
+                Date: "2020/01/20",
+                Institute: "UMPC",
+                Department: "CMU",
+                Dept_Phone: "765-325-6984",
+                Status: "Finished"
+            }
+        ];
+        dataSource.map((item,index)=>{
+            item.key = index;
+            if (item.Flag === "true") {
+                item.Flag = <span><Icon type="flag" theme="filled" /></span>;
+            }else {
+                item.Flag = ""
+            }
+        })
+        this.setState({
+            dataSource: dataSource
+        })
+    }
+
     render(){
         const columns = [
+            {
+              title: '',
+              dataIndex: 'Flag',
+              key: 'Flag',
+              align: 'center',
+            },
             {
               title: 'Date',
               dataIndex: 'Date',
@@ -39,31 +148,14 @@ export default class Record extends React.Component {
                 align: 'center',
             },
         ];
-        const dataSource = [
-            {
-                Date: "2020/01/20",
-                Institute: "UMPC",
-                Department: "CMU",
-                Dept_Phone: "765-325-6984",
-                Status: "Finished"
-            },
-            {
-                Date: "2020/01/20",
-                Institute: "UMPC",
-                Department: "CMU",
-                Dept_Phone: "765-325-6984",
-                Status: "Finished"
-            },
-        ];
         return (
-            <div class="container">
-                <Card className="cardWrap" bordered={false} bodyStyle={{padding: "24px 0"}}>
-                    <HeaderForm />
-                </Card>
-                <Card className="cardWrap" bordered={false} style={{border:"transparent"}}>
+            <div class="record-container">
+                <PageHeader />
+                <Card className="cardWrap" bordered={false}>
                     <Table
+                        className="table-style"
                         loading={false}
-                        dataSource={dataSource}
+                        dataSource={this.state.dataSource}
                         columns={columns}
                         aligh= {"center"}
                         rowClassName = {(record, index) => 'table-row-style'}
@@ -73,60 +165,3 @@ export default class Record extends React.Component {
         );
     }
 }
-class HeaderForm extends React.Component{
-    state = {
-        visible: false,
-        confirmLoading: false,
-    };
-    showRecordModal = () => {
-        this.setState({
-            visible: true,
-        });
-    };
-    handleOk = () => {
-        this.setState({
-            confirmLoading: true,
-        });
-        setTimeout(()=>{
-            this.setState({
-                visible: false,
-                confirmLoading: false,
-            });
-            message.success("You files have been successfully uploaded.");
-            window.location.href = '/#/admin/details';
-        }, 1000);
-    }
-    handleCancel = () => {
-        this.setState({
-            visible: false,
-        });
-    };
-
-    render(){
-        return (
-            <div className="header">
-                <span className="header-title">Medical Record</span>
-                <Button className="button-left" size={"large"}><Icon type="filter" /></Button>
-                <Button className="button-left" size={"large"}><Icon type="reload" /></Button>
-                <Button className="button-left" size={"large"}><Icon type="more" /></Button>
-                <Button className="button-right" type="primary" shape="round" size={"large"} onClick={this.showRecordModal}><Icon type="plus" />New Record</Button>
-                <Modal
-                    title={<span>Upload Attachments</span>}
-                    visible={this.state.visible}
-                    onOk={this.handleOk}
-                    confirmLoading={this.state.confirmLoading}
-                    onCancel={this.handleCancel}
-                >
-                    <Dragger>
-                        <p className="ant-upload-drag-icon">
-                            <Icon type="inbox" />
-                        </p>
-                        <p className="ant-upload-text">Click or drag file to this area to upload</p>
-                    </Dragger>
-                </Modal>
-            </div>
-            
-        );
-    }
-}
-HeaderForm = Form.create({})(HeaderForm);

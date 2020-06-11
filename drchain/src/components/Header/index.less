@@ -1,27 +1,41 @@
 .header {
+    height: 83px;
     background-color: #ffffff;
-    
     color: #7a7a7a;
     text-align: left;
+    .ant-menu-horizontal {
+        border-bottom: 0px;   
+    }
     .menu {
-        font-size: 16px;
-        .ant-menu-item-selected {
-            border: transparent;
-            color: black;
-        }
-        Menu.Item {
-            padding: 0 15px;
-            font-size: 22px;
-            
-        }
+        font-family: "SF";
+        src: url('/assets/fonts/SFProText.ttf');
+        font-style: normal;
+        height: 67px;
+        line-height: 67px;
+        margin-top: 16px;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.3);;
+        font-size: 20px;
         img {
-            height: 45px;
-            vertical-align: middle;
+            vertical-align: sub;
         }
-
+        .menu-item {
+            margin: 0 15px;
+        }
         .header-right {
             float: right;
         }
+
+        .ant-menu-item {
+            vertical-align: baseline;
+        }
+        .ant-menu-item-selected {
+            border: none;
+            color: black;
+        }
+        .ant-menu-item-active .ant-menu-item:hover {
+            border: none;
+            vertical-align: none;
+        }
     }
- 
+    
 }

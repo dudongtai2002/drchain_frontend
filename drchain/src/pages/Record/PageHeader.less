@@ -1,0 +1,131 @@
+//get rid of clicking animation
+button[ant-click-animating-without-extra-node]:after {
+    border: 0 none;
+    opacity: 0;
+    animation:none 0 ease 0 1 normal;
+}
+.record-header {
+
+    background-color: transparent;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    margin: 0 24px;
+    .ant-card-body {
+        padding-left: 0;
+    }
+    .record-header-title {
+        float: left;
+        color: #294f8c;
+        line-height: 53px;
+        text-align: left;
+        font-size: 35px;
+        font-weight: bold;
+        padding: 0 27px 0 0px;
+        float: left;
+    }
+    .record-header-divider {
+        position: relative;
+        width: 40px;
+        top: -1px;
+        border: 1px solid #5789DB;
+        transform: rotate(90deg);
+    }
+    .record-button-left {
+        color: #5789DB;
+        background-color: transparent;
+        height: 53px;
+        border: none;
+        padding: 0 0 0 27px;
+        font-size: 24px;
+        margin: 0 2px;
+    }
+    .record-button-right {
+        background-color: #5789DB;
+        float: right;
+        height: 53px;
+        font-size: 18px;
+        border-radius: 15px;
+    }
+
+    .shareEMR {
+        color: #5789DB;
+        font-size: 30px;
+        line-height: 36px;
+        .shareEMRContent {
+            padding-left: 16px;
+        }
+    }
+    .shareEMRInput {
+        color: #5789DB;
+        font-size: 16px;
+        height: 38px;
+        border: 2px solid #5789DB;
+        border-radius: 15px;
+    }
+}
+.form-selection {
+    .ant-btn {
+        background-color: transparent;
+        color: #5789DB;
+        border: 0px;
+        font-size: 16px;
+    }
+    .form-selection-content {
+        color: #5789DB;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        left: 30px;
+        top: -8px;
+        border-bottom: 9px solid white;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+    }
+}
+.shareEMR {
+    color: #5789DB;
+    font-size: 30px;
+    line-height: 36px;
+    .shareEMRContent {
+        padding-left: 16px;
+    }
+}
+.shareEMRInput {
+    color: #5789DB;
+    font-size: 16px;
+    height: 38px;
+    border: 2px solid #5789DB;
+    border-radius: 15px;
+}
+.shareEMRBtn {
+    background: #5789DB;
+    border-radius: 20px;
+    color: white;
+    width: 127px;
+    font-weight: bold;
+    font-size: 18px;
+    height: 35px;
+    text-align: center;
+}
+.shareEMREmailList {
+    border: none;
+    .ant-card-body {
+        padding-left: 10px;
+    }
+    .shareEMRInfo {
+        font-weight: bold;
+        font-size: 16px;
+        div{
+            padding: 0 0 4px 15px;
+        }
+    }
+    .shareEMRDelete {
+        .ant-btn {
+            height: 56px;
+            border: 0px;
+        }
+    }
+}

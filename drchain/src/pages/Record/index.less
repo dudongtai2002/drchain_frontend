@@ -1,45 +1,31 @@
-.container {
+.record-container {
+    width: 100%;
     height: calc(100vh);
+    padding-left: 45px;
     overflow: auto;
     background-color: #eff2fa;
     .cardWrap{
         background-color: transparent;
-        border-bottom: 1px solid gray;
-        margin: 15px 25px;
-    }
-    .header {
-        height: 40px;
-        background-color: transparent;
-        .header-title {
-            color: #294f8c;
-            line-height: 40px;
-            text-align: left;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 0 20px 0 0;
-            float: left;
-            border-right: 1px solid grey;
-
-        }
-        .button-left {
-            background-color: transparent;
-            float:left;
-            border: transparent;
-            margin: 0 2px;
-        }
-        .button-right {
-            float:right;
+        .ant-card-body {
+            padding-top: 0;
         }
     }
     .table-row-style {
         background-color: white;
-        font-size: 14px;
-        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .table-style {
+        .ant-table table {
+            border-spacing: 0 20px;
+        }
     }
     .ant-table-thead > tr >th{
+        border-collapse: collapse;
         color: #5789db;
         background-color: transparent;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: bold;
+        border: none;
     }
 }
