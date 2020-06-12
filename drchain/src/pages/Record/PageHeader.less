@@ -11,13 +11,16 @@ button[ant-click-animating-without-extra-node]:after {
     margin: 0 24px;
     .ant-card-body {
         padding-left: 0;
+        padding-right: 0;
     }
     .record-header-title {
+        font-family: "FuturaLT-Book";
+        font-style: normal;
+        font-size: 36px;
         float: left;
         color: #294f8c;
         line-height: 53px;
         text-align: left;
-        font-size: 35px;
         font-weight: bold;
         padding: 0 27px 0 0px;
         float: left;
@@ -41,9 +44,10 @@ button[ant-click-animating-without-extra-node]:after {
     .record-button-right {
         background-color: #5789DB;
         float: right;
-        height: 53px;
+        height: 41px;
         font-size: 18px;
         border-radius: 15px;
+        margin: 6px 0;
     }
 
     .shareEMR {
@@ -74,6 +78,31 @@ button[ant-click-animating-without-extra-node]:after {
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        left: 30px;
+        top: -8px;
+        border-bottom: 9px solid white;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+    }
+}
+.filter-selection {
+    .filter-option {
+        display: block;
+        color: #5789DB;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .filter-second-option {
+        display: block;
+        color: #5789DB;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 45px;
     }
     &:after{
         position: absolute;

@@ -74,7 +74,7 @@ export default class Wellness extends React.Component {
            ):null);
 
         return (
-            <div classNam="container">
+            <div className="container">
                 <Card className="headerWrap" bordered={false} bodyStyle={{padding: "24px 0"}}>
                     <HeaderForm 
                         dataCategories={this.dataCategories} 

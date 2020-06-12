@@ -1,5 +1,5 @@
 import React from 'react'
-import {Progress, Icon, Menu} from 'antd'
+import {Progress, Icon, Menu, Row, Col} from 'antd'
 import {NavLink} from "react-router-dom"
 import './index.less'
 
@@ -17,7 +17,6 @@ export default class NavLeft extends React.Component {
                     <div className="loading">
                         <Progress percent={userInfo.status}
                             style={{
-                                width: '240px',
                                 strokeColor: '#294F8C'
                             }}
                             showInfo={false }
@@ -30,8 +29,8 @@ export default class NavLeft extends React.Component {
                     <Menu className="menu">
                         <Menu.Item title="Medical Record" key = "/admin/record">
                             <NavLink className="link-style" to="/admin/record">
-                                <Icon className="menuIcon" type="form" style={{fontSize: '20px',color:'white'}} />
-                                <span class="menu-content">Medical Record</span>
+                            <Icon className="menuIcon" type="form" style={{fontSize: '20px',color:'white'}} />
+                            <span class="menu-content">Medical Record</span>
                             </NavLink>
                         </Menu.Item>
                         <Menu.Item title="Wellness Data" key="/admin/wellness">

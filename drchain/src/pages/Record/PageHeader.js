@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Modal, Upload, Icon, message, Card, Dropdown, Menu, Input, Avatar, Col} from 'antd'
+import {Button, Modal, Upload, Icon, message, Card, Dropdown, Menu, Input, Avatar, Col, Radio} from 'antd'
 import './PageHeader.less'
 const {Dragger} = Upload;
 
@@ -73,7 +73,22 @@ export default class HeaderForm extends React.Component{
     };
 
     render(){
-        const menu = (
+
+        const filterSelection = (
+            <Menu className="filter-selection">
+                <Radio.Group>
+                <Radio className="filter-option">Last Updated (Default)</Radio>
+                <Radio className="filter-option">Flagged Only</Radio>
+                <Radio className="filter-option">Display by Institute</Radio>
+                <Radio.Group>
+                    <Radio className="filter-second-option">UMPC</Radio>
+                    <Radio className="filter-second-option">UMPC</Radio>
+                    <Radio className="filter-second-option">UMPC</Radio>
+                </Radio.Group>
+                </Radio.Group>
+            </Menu>
+        );
+        const share = (
             <Menu className="form-selection">
               <Menu.Item key="0">
                 <Button onClick={this.showFlagModal}><Icon type="flag" theme="filled" /><span className="form-selection-content">Share Flagged</span></Button>
@@ -83,7 +98,32 @@ export default class HeaderForm extends React.Component{
               <Button><Icon type="select" /><span className="form-selection-content">Manually Select</span></Button>
               </Menu.Item>
             </Menu>
-          );
+        );
+
+        const more = (
+            <Menu className="form-selection">
+              <Menu.Item key="0">
+                <Button>
+                    <Icon type="question" />
+                    <span className="form-selection-content">Share Flagged</span>
+                </Button>
+              </Menu.Item>
+              <Menu.Divider />
+              <Menu.Item key="1">
+                <Button>
+                    <Icon type="question" />
+                    <span className="form-selection-content">To be Decided</span>
+                </Button>
+              </Menu.Item>
+              <Menu.Divider />
+              <Menu.Item key="2">
+                <Button>
+                    <Icon type="question" />
+                    <span className="form-selection-content">To be Decided</span>
+                </Button>
+              </Menu.Item>
+            </Menu>
+        );
 
         let shareEMRContact = this.state.sharedEMRContact;
         shareEMRContact = shareEMRContact.map((key, index) => {
@@ -107,12 +147,16 @@ export default class HeaderForm extends React.Component{
             <Card className="record-header" bordered={false}>
                 <span className="record-header-title">Medical Record</span>
                 <span className="record-header-divider"></span>
-                <Button className="record-button-left" size={"large"}><Icon type="filter" /></Button>
+                <Dropdown overlay={filterSelection} trigger={['click']}>
+                    <Button className="record-button-left" size={"large"}><Icon type="filter" /></Button>
+                </Dropdown>
                 <Button className="record-button-left" size={"large"}><Icon type="reload" /></Button>
-                <Dropdown overlay={menu} trigger={['click']}>
+                <Dropdown overlay={share} trigger={['click']}>
                     <Button className="record-button-left" size={"large"}><Icon type="form" /></Button>
                 </Dropdown>
-                <Button className="record-button-left" size={"large"}><Icon type="more" /></Button>
+                <Dropdown overlay={more} trigger={['click']}>
+                    <Button className="record-button-left" size={"large"}><Icon type="more" /></Button>
+                </Dropdown>
                 <Button className="record-button-right" type="primary" shape="round" size={"large"} onClick={this.showRecordModal}><Icon type="plus" />New Record</Button>
                 <Modal
                     title={<span className="shareEMR"><Icon type="mail" theme="filled" /><span  className="shareEMRContent">Share EMR</span></span>}
