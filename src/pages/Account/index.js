@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.less'
-import {Row,Col} from 'antd'
+import {Card, Row, Col} from 'antd'
 import AccountInfo from './accountInfo'
 import AccountSettings from './accountSettings'
 import PageHeader from '../../components/PageHeader'
@@ -11,16 +11,18 @@ export default class Account extends React.Component {
         return (
         <div className="account-container">
             <PageHeader title="Account Settings" />
-            <Row>
-                <Col xs={24} sm={24} md={24} lg={12} xl={14} className="section-container">
-                    <AccountInfo />
-                    <AccountPlaceHolder />
-                </Col>
-                <Col xs={24} sm={24} md={24} lg={12} xl={10} className="section-container">
-                    <AccountSettings />
-                    <AccountPlaceHolder />
-                </Col>
-            </Row>
+            <Card className="card-wrap" >
+                <Row>
+                    <Col xs={24} sm={24} md={24} lg={12} xl={14} className="section-container">
+                        <AccountInfo />
+                        <AccountPlaceHolder />
+                    </Col>
+                    <Col xs={24} sm={24} md={24} lg={12} xl={10} className="section-container">
+                        <AccountSettings />
+                        <AccountPlaceHolder />
+                    </Col>
+                </Row>
+            </Card>    
         </div>
         );
     }

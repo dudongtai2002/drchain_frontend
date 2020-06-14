@@ -9,7 +9,7 @@ export default class AccountPlaceHolder extends React.Component {
             <div className="account-place-holder">
                 <Row className="info-header">
                     <span>Basic Info</span>
-                    <Icon type="FormOutlined" className="edit-icon"/>
+                    <Icon type="form" className="edit-icon"/>
                     </Row>
                 <Divider/>
             </div>  
