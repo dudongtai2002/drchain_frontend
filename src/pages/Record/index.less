@@ -1,13 +1,12 @@
 .record-container {
     width: 100%;
     height: calc(100vh);
-    padding-left: 20px;
     overflow: auto;
     background-color: #eff2fa;
     .cardWrap{
         background-color: transparent;
         .ant-card-body {
-            padding-top: 0;
+            padding: 0 40px 0 40px;
         }
     }
     .table-row-style {
@@ -17,7 +16,20 @@
     }
     .table-style {
         .ant-table table {
-            border-spacing: 0 20px;
+            border-collapse: separate;
+            border-spacing: 0px 19px;
+            tr > td:first-child {
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+                text-align: center;
+            }
+            tr > td:last-child {
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+            .ant-checkbox-inner::after {
+                display: none;
+            }
         }
     }
     .ant-table-thead > tr >th{
@@ -27,5 +39,6 @@
         font-size: 24px;
         font-weight: bold;
         border: none;
+        padding: 0 16px;
     }
 }

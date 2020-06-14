@@ -5,51 +5,58 @@ button[ant-click-animating-without-extra-node]:after {
     animation:none 0 ease 0 1 normal;
 }
 .record-header {
-
     background-color: transparent;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
-    margin: 0 24px;
-    .ant-card-body {
-        padding-left: 0;
-        padding-right: 0;
+    margin: 0 40px;
+    padding: 30px 0 15px 0;
+    .ant-menu-horizontal {
+        border: 0;
     }
-    .record-header-title {
-        font-family: "FuturaLT-Book";
-        font-style: normal;
-        font-size: 36px;
-        float: left;
-        color: #294f8c;
-        line-height: 53px;
-        text-align: left;
-        font-weight: bold;
-        padding: 0 27px 0 0px;
-        float: left;
+    .ant-menu-horizontal > .ant-menu-item {
+        border: 0;
     }
-    .record-header-divider {
-        position: relative;
-        width: 40px;
-        top: -1px;
-        border: 1px solid #5789DB;
-        transform: rotate(90deg);
-    }
-    .record-button-left {
-        color: #5789DB;
+    .record-header-menu {
         background-color: transparent;
-        height: 53px;
-        border: none;
-        padding: 0 0 0 27px;
-        font-size: 24px;
-        margin: 0 2px;
+        .ant-menu-item{
+            padding: 0;
+        }
+        .record-header-title {
+            font-family: 'futura';
+            font-style: normal;
+            font-size: 40px;
+            float: left;
+            color: #294f8c;
+            line-height: 53px;
+            text-align: left;
+            font-weight: bolder;
+            padding: 5px 27px 0 0px;
+            float: left;
+            vertical-align: middle;
+        }
+        .record-header-divider {
+            border: 1px solid #5789DB;
+            height: 26px;
+        }
+        .record-button-left {
+            color: #5789DB;
+            background-color: transparent;
+            height: 53px;
+            border: none;
+            padding: 0 0 0 27px;
+            font-size: 24px;
+            margin: 0 2px;
+            i {
+                font-size: 24px;
+            }
+        }
+        .record-button-right {
+            background-color: #5789DB;
+            float: right;
+            height: 58px;
+            font-size: 22px;
+            border-radius: 15px;
+        }
     }
-    .record-button-right {
-        background-color: #5789DB;
-        float: right;
-        height: 41px;
-        font-size: 18px;
-        border-radius: 15px;
-        margin: 6px 0;
-    }
-
     .shareEMR {
         color: #5789DB;
         font-size: 30px;

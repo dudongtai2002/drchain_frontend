@@ -2,28 +2,37 @@
     background-color: #5789DB;
     color: #ffffff;
     font-family: sans-serif;
-    font-weight: bold;
     height: calc(100vh);
     .title {
-        font-size: 28px;
+        font-size: 26px;
+        font-weight: bold;
         line-height: 36px;
-        padding: 51px 10px 25px 10px;
-        text-align: center;
+        padding: 43px 27px 3px 27px;
+        text-align: left;
+    }
+    .role {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 3px 27px 32px 27px;
+        text-align: left;
     }
     .loading-title {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold;
         line-height: 21px;
-        padding: 0 30px;
+        padding: 0 27px 9px 27px;
     } 
     .loading {
-        padding: 0 30px;
+        padding: 0 43px 0 27px;
+        .ant-progress-success-bg, .ant-progress-bg {
+            background-color: #294f8c;
+        }
     }
     .loading-status {
         font-size: 12px;
-        line-height: 17px;
-        padding: 9px 0 21px 30px;
-        border-bottom: 1px solid white
+        line-height: 14px;
+        padding: 9px 21px 33px 27px;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
     }
     .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
         border-right: 0;
@@ -31,10 +40,31 @@
     .menu {
         background-color: #5789db;
         text-align: left;
+        .menu-firstItem {
+            margin-top: 14px;
+        }
         .link-style {
             color: white;
             font-size: 18px;
+            font-weight: bold;
+            line-height: 21px;
             border: 0;
+            text-align: left;
+            vertical-align: middle;
+            .anticon{
+                margin-right: 0;
+            }
+            .menu-content {
+                padding-left: 14px;
+            }
+        }
+        .ant-divider-horizontal{
+            margin: 24px 27px;
+            width: 82%;
+            min-width: 50%;
+        }
+        .ant-menu-item {
+            padding: 10px 27px;
         }
         .ant-menu-item-selected {
             background-color: #294f8c;

@@ -15,10 +15,10 @@ import Attachment from './Attachment'
 export default class Details extends React.Component {
 
     handleClick = () => {
-        window.location.href = '/#/admin/record';
+        window.location.href = '/#/record';
     }
     handleConfirm = () => {
-        window.location.href = '/#/admin/record';
+        window.location.href = '/#/record';
     }
 
     render() {

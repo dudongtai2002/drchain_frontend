@@ -6,7 +6,9 @@ export default class Record extends React.Component {
     constructor(props) {
         super(props);
         this.state= {
-            dataSource: []
+            dataSource: [],
+            selectedRowKeys:[],
+            selectedRows:[],
         };
     }
     componentDidMount() {
@@ -110,42 +112,45 @@ export default class Record extends React.Component {
     }
 
     render(){
+        const rowSelection = {
+            onChange: (selectedRowKeys, selectedRows) => {
+                this.setState({
+                    selectedRowKeys: selectedRowKeys,
+                    selectedRows: selectedRows
+                })
+            },
+        };
+
         const columns = [
             {
               title: '',
               dataIndex: 'Flag',
               key: 'Flag',
-              align: 'center',
             },
             {
               title: 'Date',
               dataIndex: 'Date',
               key: 'Date',
-              align: 'center',
             },
             {
               title: 'Institute',
               dataIndex: 'Institute',
               key: 'Institute',
-              align: 'center',
             },
             {
               title: 'Department',
               dataIndex: 'Department',
               key: 'Department',
-              align: 'center',
             },
             {
                 title: 'Dept_Phone',
                 dataIndex: 'Dept_Phone',
                 key: 'Dept_Phone',
-                align: 'center',
             },
             {
                 title: 'Status',
                 dataIndex: 'Status',
                 key: 'Status',
-                align: 'center',
             },
         ];
         return (
@@ -157,8 +162,15 @@ export default class Record extends React.Component {
                         loading={false}
                         dataSource={this.state.dataSource}
                         columns={columns}
-                        aligh= {"center"}
+                        align= {"left"}
+                        rowSelection={rowSelection}
                         rowClassName = {(record, index) => 'table-row-style'}
+                        onRow={record => {
+                            return {
+                              onClick: event => 
+                              window.location.href = '/#/details',
+                            };
+                        }}
                     />
                 </Card>
             </div>

@@ -1,15 +1,16 @@
 import React from 'react'
-import {Button, Modal, Upload, Icon, message, Card, Dropdown, Menu, Input, Avatar, Col, Radio} from 'antd'
+import {Button, Modal, Upload, Icon, message, Card, Dropdown, Menu, Input, Avatar, Row,Col, Radio, Divider} from 'antd'
 import './PageHeader.less'
 const {Dragger} = Upload;
-
 
 export default class HeaderForm extends React.Component{
     state = {
         recordVisible: false,
         flagVisible: false,
+        filterVisible: false,
         confirmRecordLoading: false,
         confirmFlagLoading: false,
+        confirmFilterLoading: false,
         sharedEMRContact: [
             {
                 name: "Tarika Jain",
@@ -25,6 +26,29 @@ export default class HeaderForm extends React.Component{
             }
         ]
     };
+    showFilterModal = () => {
+        this.setState({
+            filterVisible: true,
+        });
+    };
+    handleFilterOk = () => {
+        this.setState({
+            confirmFilterLoading: true,
+        });
+        setTimeout(()=>{
+            this.setState({
+                filterVisible: false,
+                confirmFilterLoading: false,
+            });
+            message.success("You search result have been successfully displayed.");
+        }, 1000);
+    }
+    handleFilterCancel = () => {
+        this.setState({
+            filterVisible: false,
+        });
+    };
+
     showRecordModal = () => {
         this.setState({
             recordVisible: true,
@@ -40,7 +64,7 @@ export default class HeaderForm extends React.Component{
                 confirmRecordLoading: false,
             });
             message.success("You files have been successfully uploaded.");
-            window.location.href = '/#/admin/details';
+            window.location.href = '/#/details';
         }, 1000);
     }
     handleRecordCancel = () => {
@@ -72,6 +96,9 @@ export default class HeaderForm extends React.Component{
         });
     };
 
+    handleManualSelect = () => {
+        
+    }
     render(){
 
         const filterSelection = (
@@ -95,7 +122,7 @@ export default class HeaderForm extends React.Component{
               </Menu.Item>
               <Menu.Divider />
               <Menu.Item key="1">
-              <Button><Icon type="select" /><span className="form-selection-content">Manually Select</span></Button>
+              <Button onClick="this.handleManualSelect"><Icon type="select" /><span className="form-selection-content">Manually Select</span></Button>
               </Menu.Item>
             </Menu>
         );
@@ -144,22 +171,45 @@ export default class HeaderForm extends React.Component{
         })
 
         return (
-            <Card className="record-header" bordered={false}>
-                <span className="record-header-title">Medical Record</span>
-                <span className="record-header-divider"></span>
-                <Dropdown overlay={filterSelection} trigger={['click']}>
-                    <Button className="record-button-left" size={"large"}><Icon type="filter" /></Button>
-                </Dropdown>
-                <Button className="record-button-left" size={"large"}><Icon type="reload" /></Button>
-                <Dropdown overlay={share} trigger={['click']}>
-                    <Button className="record-button-left" size={"large"}><Icon type="form" /></Button>
-                </Dropdown>
-                <Dropdown overlay={more} trigger={['click']}>
-                    <Button className="record-button-left" size={"large"}><Icon type="more" /></Button>
-                </Dropdown>
-                <Button className="record-button-right" type="primary" shape="round" size={"large"} onClick={this.showRecordModal}><Icon type="plus" />New Record</Button>
+            <Row className="record-header">
+                    <Menu className = "record-header-menu" mode="horizontal">
+                        <Menu.Item disabled>
+                            <span className="record-header-title">Medical Record</span>
+                        </Menu.Item>
+                        <Divider className="record-header-divider" type="vertical"/>
+                        <Menu.Item disabled className="menu-item">
+                            <Button className="record-button-left" size={"large"} onClick={this.showFilterModal}><Icon type="filter"/></Button>
+                        </Menu.Item>
+                        <Menu.Item disabled className="menu-item">
+                            <Button className="record-button-left" size={"large"}><Icon type="reload" /></Button>
+                        </Menu.Item>
+                        <Menu.Item disabled  className="menu-item">
+                            <Dropdown overlay={share} trigger={['click']}>
+                                <Button className="record-button-left" size={"large"}><Icon type="form" /></Button>
+                            </Dropdown>
+                        </Menu.Item>
+                        <Menu.Item disabled  className="menu-item">
+                            <Dropdown overlay={more} trigger={['click']}>
+                                <Button className="record-button-left" size={"large"}><Icon type="more" /></Button>
+                            </Dropdown>
+                        </Menu.Item>
+                        <Menu.Item disabled  style={{float: "right"}}>
+                            <Button className="record-button-right" type="primary" shape="round" size={"large"} onClick={this.  showRecordModal}  ><Icon type="plus" style={{fontSize: 22}} />New Record</Button>
+                        </Menu.Item>
+                    </Menu>
                 <Modal
-                    title={<span className="shareEMR"><Icon type="mail" theme="filled" /><span  className="shareEMRContent">Share EMR</span></span>}
+                    title={<span className="shareFilter">Filter</span>}
+                    visible={this.state.filterVisible}
+                    confirmLoading={this.state.confirmFilterLoading}
+                    onCancel={this.handleFilterCancel}
+                    footer={[
+                        <Button className="doFilter" onClick={this.handleFilterOk}>Search</Button>
+                    ]}
+                >   
+                    To be Decided
+                </Modal>
+                <Modal
+                    title={<span className="shareEMR"><Icon type="mail" theme="filled" /><span className="shareEMRContent">Share   EMR</span></span>}
                     visible={this.state.flagVisible}
                     confirmLoading={this.state.confirmFlagLoading}
                     onCancel={this.handleFlagCancel}
@@ -184,7 +234,7 @@ export default class HeaderForm extends React.Component{
                         <p className="ant-upload-text">Click or drag file to this area to upload</p>
                     </Dragger>
                 </Modal>
-            </Card>
+            </Row>
         );
     }
 }

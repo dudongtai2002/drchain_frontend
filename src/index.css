@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'futura';
+  font-style: normal;
+  font-weight: 400;
+  src: local('futura'), local('futura'),
+       url('/public/assets/fonts/Futura\ LT\ Bold.ttf') format('truetype')
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'futura', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'FuturaLT-Book'
     sans-serif;
   -webkit-font-smoothing: antialiased;
