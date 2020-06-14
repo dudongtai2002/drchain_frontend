@@ -27,7 +27,7 @@ export default class AccountSettings extends React.Component {
             </div>
             <div className="settings-list">
                 <Row className="settings-list-header">
-                    <Col span="8">Institure</Col>
+                    <Col span="8">Institute</Col>
                     <Col span="10">Access</Col>
                     <Col span="6" />
                 </Row>

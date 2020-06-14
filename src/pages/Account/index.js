@@ -9,14 +9,14 @@ import AccountPlaceHolder from './accountPlaceHoder'
 export default class Account extends React.Component {
     render(){
         return (
-        <div className="page-container">
+        <div className="account-container">
             <PageHeader title="Account Settings" />
             <Row>
-                <Col span="14" className="section-container">
+                <Col xs={24} sm={24} md={24} lg={12} xl={14} className="section-container">
                     <AccountInfo />
                     <AccountPlaceHolder />
                 </Col>
-                <Col span="10" className="section-container">
+                <Col xs={24} sm={24} md={24} lg={12} xl={10} className="section-container">
                     <AccountSettings />
                     <AccountPlaceHolder />
                 </Col>
