@@ -145,5 +145,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "react-scripts": "^3.4.1"
   }
 }
