@@ -34,20 +34,20 @@ export default class NavLeft extends React.Component {
                         </Menu.Item>
                         <Menu.Item className="menu-divider" title="Wellness Data" key="/wellness">
                             <NavLink className="link-style" to="/wellness">
-                                <Icon className="menuIcon" type="fund" style={{fontSize: '18px',color:'white'}}/>
+                                <img src="/assets/icon/Data.svg" alt="data" style={{width:18, verticalAlign:"top"}}></img>
                                 <span class="menu-content">Wellness Data</span>
                             </NavLink>
                         </Menu.Item>
                         <Divider className="menu-divider"/>
                         <Menu.Item title="Account Setting" key="/account">
                             <NavLink className="link-style" to="/account">
-                                <Icon className="menuIcon" type="user" style={{fontSize: '18px',color:'white'}} />
+                                <img src="/assets/icon/Profile_Management.svg" alt="profile" style={{width:18, verticalAlign:"top"}}></img>
                                 <span class="menu-content">Profile Management</span>
                             </NavLink>
                         </Menu.Item>
                         <Menu.Item title="Finance" key="/finance">
                             <NavLink className="link-style" to="/finance">
-                                <Icon className="menuIcon" type="dollar" style={{fontSize: '20px',color:'white'}} />
+                                <img src="/assets/icon/Finance.svg" alt="finance" style={{width:18, verticalAlign:"baseline"}}></img>
                                 <span class="menu-content">Finance</span>
                                 </NavLink>
                         </Menu.Item>

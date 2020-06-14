@@ -55,6 +55,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
     "react-dom": "^16.13.1",
+    "react-highlight-words": "^0.16.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "resolve": "1.15.0",

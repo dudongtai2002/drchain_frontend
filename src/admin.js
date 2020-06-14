@@ -21,7 +21,7 @@ export default class Admin extends React.Component {
                 <Layout>
                     <Header>
                         <Row>
-                            <Header />
+                            <Header/>
                         </Row>
                     </Header>
                     <Layout>

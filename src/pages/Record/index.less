@@ -3,6 +3,11 @@
     height: calc(100vh);
     overflow: auto;
     background-color: #eff2fa;
+    .ant-table-thead > tr > th .ant-table-filter-icon > svg {
+        font-size: 14px;
+        top: 42%;
+        left: 48%
+    }
     .cardWrap{
         background-color: transparent;
         .ant-card-body {
@@ -11,13 +16,13 @@
     }
     .table-row-style {
         background-color: white;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 21px;
     }
     .table-style {
         .ant-table table {
             border-collapse: separate;
-            border-spacing: 0px 19px;
+            border-spacing: 0px 12px;
             tr > td:first-child {
                 border-top-left-radius: 15px;
                 border-bottom-left-radius: 15px;
@@ -28,7 +33,11 @@
                 border-bottom-right-radius: 15px;
             }
             .ant-checkbox-inner::after {
-                display: none;
+                top: 18%;
+                left: 8%
+            }
+            .ant-checkbox-indeterminate .ant-checkbox-inner::after {
+                background-color: transparent;
             }
         }
     }
@@ -37,6 +46,7 @@
         color: #5789db;
         background-color: transparent;
         font-size: 24px;
+        line-height: 29px;
         font-weight: bold;
         border: none;
         padding: 0 16px;

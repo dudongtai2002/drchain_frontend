@@ -118,7 +118,7 @@ export default class HeaderForm extends React.Component{
         const share = (
             <Menu className="form-selection">
               <Menu.Item key="0">
-                <Button onClick={this.showFlagModal}><Icon type="flag" theme="filled" /><span className="form-selection-content">Share Flagged</span></Button>
+                <Button onClick={this.showFlagModal}><img src="/assets/icon/Flag.svg" alt="data" style={{width:18, verticalAlign:"middle"}}></img><span className="form-selection-content">Share Flagged</span></Button>
               </Menu.Item>
               <Menu.Divider />
               <Menu.Item key="1">
