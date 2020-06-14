@@ -22,12 +22,12 @@ export default class AccountSettings extends React.Component {
         <div className="account-settings">
             <div className="settings-header">
                 <span>Data Authorization</span>
-                <Icon type="CaretDownOutlined" className="icon" />
-                <Icon type="PlusSquareFilled" className="icon" />
+                <Icon type="caret-down" className="icon" />
+                <Icon type="plus-square" className="icon" />
             </div>
             <div className="settings-list">
                 <Row className="settings-list-header">
-                    <Col span="8">Institure</Col>
+                    <Col span="8">Institute</Col>
                     <Col span="10">Access</Col>
                     <Col span="6" />
                 </Row>
@@ -42,8 +42,8 @@ export default class AccountSettings extends React.Component {
                             </Select>
                         </Col>
                         <Col span="6" className="operations">
-                            <Icon type="DeleteOutlined" className="icon" />
-                            <Icon type="MoreOutlined" className="icon" />
+                            <Icon type="delete" className="icon" />
+                            <Icon type="more" className="icon" />
                         </Col>
                     </Row>
                 ))}

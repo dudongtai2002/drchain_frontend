@@ -26,7 +26,16 @@ export default class Admin extends React.Component {
                     </Header>
                     <Layout>
                         <Sider
-                           width="300px"
+                            breakpoint="lg"
+                            width="300px"
+                            collapsedWidth="0"
+                            onBreakpoint={broken => {
+                            console.log(broken);
+                            }}
+                            onCollapse={(collapsed, type) => {
+                            console.log(collapsed, type);
+                            }}
+                           
                         >
                             <NavLeft/>
                         </Sider>

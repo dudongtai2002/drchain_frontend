@@ -29,7 +29,7 @@ export default class AccountInfo extends React.Component {
             <div className="account-detail">
                 <Row className="info-header">
                     <span>Basic Info</span>
-                    <Icon type = "FormOutlined" className="edit-icon"/>
+                    <Icon type = "form" className="edit-icon"/>
                 </Row>
                 <Divider/>
                 <Row>

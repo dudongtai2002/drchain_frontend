@@ -1,5 +1,5 @@
 import React from 'react'
-import {Progress, Icon, Menu, Row, Col, Divider} from 'antd'
+import {Progress, Icon, Menu, Divider} from 'antd'
 import {NavLink} from "react-router-dom"
 import './index.less'
 
