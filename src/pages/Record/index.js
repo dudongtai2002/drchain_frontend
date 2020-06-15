@@ -142,7 +142,7 @@ export default class Record extends React.Component {
             },
             {
                 Flag: "true",
-                Date: "08/10/2019 9:50AM",
+                Date: "08/10/2019 09:50AM",
                 Department: "Orthopaedic",
                 Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
