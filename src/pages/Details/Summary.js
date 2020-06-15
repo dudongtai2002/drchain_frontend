@@ -8,7 +8,7 @@ export default class Summary extends React.Component {
     constructor(props) {
         super(props);
         this.state = ({
-            menuTreeNode: [],
+            // menuTreeNode: [],
             time: "05/23/2020 10:40AM",
             provider: "Steven Chen",
             department: "Surgical Department",
@@ -16,24 +16,24 @@ export default class Summary extends React.Component {
             institute: "UPMC Shadyside"
         })
     }
-    componentWillMount() {
-        const menuTreeNode = this.renderMenu(MenuConfig);
-        this.setState({
-            menuTreeNode
-        })
-    }
-    renderMenu=(data)=> {
-        return data.map((item)=>{
-            if (item.children) {
-                return (
-                    <OptGroup label={item.title}>
-                        {this.renderMenu(item.children)}
-                    </OptGroup>
-                )
-            }
-            return <Option value={item.title}>{item.title}</Option>
-        })
-    }
+    // componentWillMount() {
+    //     const menuTreeNode = this.renderMenu(MenuConfig);
+    //     this.setState({
+    //         menuTreeNode
+    //     })
+    // }
+    // renderMenu=(data)=> {
+    //     return data.map((item)=>{
+    //         if (item.children) {
+    //             return (
+    //                 <OptGroup label={item.title}>
+    //                     {this.renderMenu(item.children)}
+    //                 </OptGroup>
+    //             )
+    //         }
+    //         return <Option value={item.title}>{item.title}</Option>
+    //     })
+    // }
     render() {
         
         return (
@@ -50,9 +50,10 @@ export default class Summary extends React.Component {
                     <Row className="summary-row">
                         <Col span="10" className="summary-label">Department</Col>
                         <Col span="14" className="summary-content">
-                            <Select defaultValue="Select Department" style={{ width: 180 }}>
+                            {/* <Select defaultValue="Select Department" style={{ width: 180 }}>
                                 {this.state.menuTreeNode}
-                            </Select>
+                            </Select> */}
+                            psychopathology
                         </Col>
                     </Row>
                     <Row className="summary-row">
