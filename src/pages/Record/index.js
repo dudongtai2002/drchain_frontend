@@ -19,9 +19,9 @@ export default class Record extends React.Component {
         data.map((item,index)=>{
             item.key = index;
             if (item.Flag === "true") {
-                item.Flag = <button name="true" style={{backgroundColor:'transparent', border: 0}}><img  style={{width: 16}} src="/assets/icon/Flag.svg"/></button>;
+                item.Flag = <button name="true" style={{backgroundColor:'transparent', border: 0}}><img className="button-flag" src="/assets/icon/Flag.svg"/></button>;
             }else if (item.Flag === "false") {
-                item.Flag = <button name="false" style={{backgroundColor:'transparent', border: 0}}><img style={{width: 16}}src="/assets/icon/noFlag.svg"/></button>;
+                item.Flag = <button name="false" style={{backgroundColor:'transparent', border: 0}}><img className="button-flag" src="/assets/icon/noFlag.svg"/></button>;
             }
         })
         this.setState({

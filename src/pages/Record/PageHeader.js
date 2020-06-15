@@ -118,11 +118,11 @@ export default class HeaderForm extends React.Component{
         const share = (
             <Menu className="form-selection">
               <Menu.Item key="0">
-                <Button onClick={this.showFlagModal}><img src="/assets/icon/Flag.svg" alt="data" style={{width:18, verticalAlign:"middle"}}></img><span className="form-selection-content">Share Flagged</span></Button>
+                <Button onClick={this.showFlagModal}><img className="form-selection-icon" src="/assets/icon/Flag.svg" alt="flag"></img><span className="form-selection-content">Share Flagged</span></Button>
               </Menu.Item>
               <Menu.Divider />
               <Menu.Item key="1">
-              <Button onClick="this.handleManualSelect"><Icon type="select" /><span className="form-selection-content">Manually Select</span></Button>
+              <Button onClick="this.handleManualSelect"><img className="form-selection-icon" src="/assets/icon/Check_Box.svg"></img><span className="form-selection-content">Share Checked</span></Button>
               </Menu.Item>
             </Menu>
         );
@@ -194,7 +194,10 @@ export default class HeaderForm extends React.Component{
                             </Dropdown>
                         </Menu.Item>
                         <Menu.Item disabled  style={{float: "right"}}>
-                            <Button className="record-button-right" type="primary" shape="round" size={"large"} onClick={this.  showRecordModal}  ><Icon type="plus" style={{fontSize: 22}} />New Record</Button>
+                            <Button className="record-button-right" type="primary" shape="round" size={"large"} onClick={this.  showRecordModal}>
+                                <img className="newRecord-icon" src="/assets/icon/plus.svg"></img>
+                                New Record
+                            </Button>
                         </Menu.Item>
                     </Menu>
                 <Modal

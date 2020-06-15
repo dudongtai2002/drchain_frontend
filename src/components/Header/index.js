@@ -11,7 +11,7 @@ export default class Header extends React.Component {
                         <Menu className = "menu" theme="light" mode="horizontal">
                             <Menu.Item>
                                 <img className="menu-logo-icon" src="/assets/DRCHAIN_LOGO.svg" alt="Logo"></img>
-                                <img src='/assets/Dr.chainlogo.svg' alt="Logo" />
+                                <img className="menu-logo" src='/assets/Dr.chainlogo.svg' alt="Logo" />
                             </Menu.Item>
                             <Menu.Item className="menu-item">DashBoard</Menu.Item>
                             <Menu.Item className="menu-item">Explore</Menu.Item>
@@ -19,15 +19,20 @@ export default class Header extends React.Component {
                             <Menu.Item>
                             <Search
                                 placeholder="Search for everything you need..."
-                                style={{ width: 300}} />
+                                className="search-input"
+                            />
                             </Menu.Item>
                             <Menu.Item className="header-right">
                             <Avatar style={{size: 20}} src="https://picsum.photos/200" />
                             <span className="header-user-icon" >Lawrence Liu</span>
                             <Icon type="down" style={{verticalAlign:'middle'}} />
                             </Menu.Item>
-                            <Menu.Item className="header-right" style={{padding:'0 2px'}}><Icon type="sound" style={{ fontSize: '18px', verticalAlign:'middle'}} /></Menu.Item>
-                            <Menu.Item className="header-right" style={{padding:'0 2px'}}><Icon type="bell" style={{ fontSize: '18px', verticalAlign:'middle'}} /></Menu.Item>
+                            <Menu.Item className="header-right">
+                                <img className="header-icon" src="/assets/icon/Horn.svg" alt="horn"></img>
+                            </Menu.Item>
+                            <Menu.Item className="header-right">
+                                <img className="header-icon" src="/assets/icon/Bell.svg" alt="bell"></img>
+                            </Menu.Item>
                         </Menu>
                     </Col>
                 </Row>

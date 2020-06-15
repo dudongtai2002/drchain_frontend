@@ -88,6 +88,9 @@ module.exports = function(webpackEnv) {
         options: cssOptions,
       },
       {
+        loader:require.resolve('postcss-loader'),
+      },
+      {
         loader: require.resolve('less-loader'),
         options: lessOptions,
       },
