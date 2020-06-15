@@ -10,9 +10,7 @@ export default class Admin extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: 0,
-            height: 0,
-            windowDimension: ""
+            width: 280,
         };
     }
     render() {
@@ -26,8 +24,7 @@ export default class Admin extends React.Component {
                     </Header>
                     <Layout>
                         <Sider
-                            breakpoint="lg"
-                            width="300px"
+                            width={this.state.width}
                             collapsedWidth="0"
                             onBreakpoint={broken => {
                             console.log(broken);

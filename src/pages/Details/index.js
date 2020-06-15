@@ -36,13 +36,13 @@ export default class Details extends React.Component {
                 </Card>
                 <div className="body-wrap">
                     <Row type="flex" gutter={48} align="top">
-                        <Col md={10}>
+                        <Col  xs={24} sm={24} md={12} lg={12} xl={12} >
                             <Summary />
                             <Instruction />
                             <Medication />
                             <Note />
                         </Col>
-                        <Col md={14}>
+                        <Col  xs={24} sm={24} md={12} lg={12} xl={12} >
                             <Vitals />
                             <Allergies />
                             <Visit />

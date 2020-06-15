@@ -103,8 +103,8 @@ export default class Record extends React.Component {
             {  
                 Flag: "true",
                 Date: "04/27/2020 11:40AM",
-                Department: "Cosmetic",
-                Provider: "Rangar Lothbrook",
+                Department: "Audiology",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "Chestnut Hills Dental",
                 Dept_Phone: "412-400-4707"
             },
@@ -112,7 +112,7 @@ export default class Record extends React.Component {
                 Flag: "false",
                 Date: "03/21/2020 09:20AM",
                 Department: "Dermatology",
-                Provider: "Rangar Lothbrook",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-1286"
             },
@@ -120,7 +120,7 @@ export default class Record extends React.Component {
                 Flag: "false",
                 Date: "02/12/2020 12:10PM",
                 Department: "Orthodpaedic",
-                Provider: "Rangar Lothbrook",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "West Penn Hospital",
                 Dept_Phone: "412-983-2749"
             },
@@ -128,23 +128,23 @@ export default class Record extends React.Component {
                 Flag: "true",
                 Date: "12/01/2020 15:00PM",
                 Department: "Gastroenterology",
-                Provider: "Rangar Lothbrook",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-9090"
             },
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Audiology",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "true",
-                Date: "08/10/2019 9:50AM",
+                Date: "08/10/2019 09:50AM",
                 Department: "Orthopaedic",
-                Provider: "Rangar Lothbrook",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             }
@@ -152,8 +152,8 @@ export default class Record extends React.Component {
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Dental",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             }
@@ -161,8 +161,8 @@ export default class Record extends React.Component {
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Vision",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             }
@@ -170,72 +170,72 @@ export default class Record extends React.Component {
             {
                 Flag: "true",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "true",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "true",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "false",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             },
             {
                 Flag: "true",
                 Date: "08/28/2019 10:50AM",
-                Department: "Surgical",
-                Provider: "Rangar Lothbrook",
+                Department: "Oral Surgical",
+                Provider: "Dr. Ranger Lothbrook, MD",
                 Clinic: "UPMC Shadyside",
                 Dept_Phone: "412-787-0101"
             }
