@@ -12,7 +12,7 @@ export default class IRouter extends React.Component {
         return (
             <HashRouter>
                 <App>
-                    <Route path="/record" render={()=>
+                    <Route path="/" render={()=>
                         <Admin>
                             <Switch>
                                 <Route path='/record' component={Record}></Route>
