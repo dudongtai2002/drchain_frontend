@@ -29,38 +29,38 @@ export default class NavLeft extends React.Component {
                         <Menu.Item className="menu-firstItem" title="Medical Record" key = "/record">
                             <NavLink className="link-style" to="/record">
                                 <img className="navLeft-icon" src="/assets/icon/Record.svg" alt="record"></img>
-                                <span class="menu-content">Medical Record</span>
+                                <span className="menu-content">Medical Record</span>
                             </NavLink>
                         </Menu.Item>
                         <Menu.Item className="menu-divider" title="Wellness Data" key="/wellness">
                             <NavLink className="link-style" to="/wellness">
                                 <img className="navLeft-icon" src="/assets/icon/Data.svg" alt="data"></img>
-                                <span class="menu-content">Wellness Data</span>
+                                <span className="menu-content">Wellness Data</span>
                             </NavLink>
                         </Menu.Item>
                         <Divider className="menu-divider"/>
                         <Menu.Item title="Account Setting" key="/account">
                             <NavLink className="link-style" to="/account">
                                 <img className="navLeft-icon" src="/assets/icon/Profile_Management.svg" alt="profile"></img>
-                                <span class="menu-content">Profile Management</span>
+                                <span className="menu-content">Profile Management</span>
                             </NavLink>
                         </Menu.Item>
                         <Menu.Item title="Finance" key="/finance">
                             <NavLink className="link-style" to="/finance">
                                 <img className="navLeft-icon" src="/assets/icon/Finance.svg" alt="finance"></img>
-                                <span class="menu-content">Finance</span>
+                                <span className="menu-content">Finance</span>
                                 </NavLink>
                         </Menu.Item>
                         <Menu.Item title="To be decided" key="/blank1">
                             <NavLink className="link-style" to="/blank1">
                                 <img className="navLeft-icon" src="/assets/icon/Settings.svg" alt="setting"></img>
-                                <span class="menu-content">Settings</span>
+                                <span className="menu-content">Settings</span>
                             </NavLink>
                         </Menu.Item>
                         <Menu.Item title="To be decided" key="/blank2">
                             <NavLink className="link-style" to="/blank2">
                                 <img className="navLeft-icon" src="/assets/icon/Settings.svg" alt="setting"></img>
-                                <span class="menu-content">To Be Decided</span>
+                                <span className="menu-content">To Be Decided</span>
                             </NavLink>
                         </Menu.Item>
                     </Menu>

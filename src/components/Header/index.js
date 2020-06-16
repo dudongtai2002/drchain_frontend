@@ -28,10 +28,10 @@ export default class Header extends React.Component {
                             <Icon type="down" style={{verticalAlign:'middle'}} />
                             </Menu.Item>
                             <Menu.Item className="header-right">
-                                <img className="header-icon" src="/assets/icon/Horn.svg" alt="horn"></img>
+                                <img className="header-icon" src="/assets/icon/Horn.svg" alt="horn" />
                             </Menu.Item>
                             <Menu.Item className="header-right">
-                                <img className="header-icon" src="/assets/icon/Bell.svg" alt="bell"></img>
+                                <img className="header-icon" src="/assets/icon/Bell.svg" alt="bell"/>
                             </Menu.Item>
                         </Menu>
                     </Col>

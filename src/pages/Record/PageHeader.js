@@ -195,7 +195,7 @@ export default class HeaderForm extends React.Component{
                         </Menu.Item>
                         <Menu.Item disabled  style={{float: "right"}}>
                             <Button className="record-button-right" type="primary" shape="round" size={"large"} onClick={this.  showRecordModal}>
-                                <img className="newRecord-icon" src="/assets/icon/plus.svg"></img>
+                                <img className="newRecord-icon" src="/assets/icon/plus.svg" />
                                 New Record
                             </Button>
                         </Menu.Item>
