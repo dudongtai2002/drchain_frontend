@@ -178,24 +178,32 @@ export default class HeaderForm extends React.Component{
                         </Menu.Item>
                         <Divider className="record-header-divider" type="vertical"/>
                         <Menu.Item disabled className="menu-item">
-                            <Button className="record-button-left" size={"large"} onClick={this.showFilterModal}><Icon type="filter"/></Button>
+                            <Button className="record-button-left" size={"large"} onClick={this.showFilterModal}>
+                                <img src="/assets/icon/Filter.svg" alt="filter"/>
+                            </Button>
                         </Menu.Item>
                         <Menu.Item disabled className="menu-item">
-                            <Button className="record-button-left" size={"large"}><Icon type="reload" /></Button>
+                            <Button className="record-button-left" size={"large"}>
+                                <img src="/assets/icon/Refresh.svg" alt="refresh"/>
+                            </Button>
                         </Menu.Item>
                         <Menu.Item disabled  className="menu-item">
                             <Dropdown overlay={share} trigger={['click']}>
-                                <Button className="record-button-left" size={"large"}><Icon type="form" /></Button>
+                                <Button className="record-button-left" size={"large"}>
+                                    <img src="/assets/icon/Share.svg" alt="share"/>
+                                </Button>
                             </Dropdown>
                         </Menu.Item>
                         <Menu.Item disabled  className="menu-item">
                             <Dropdown overlay={more} trigger={['click']}>
-                                <Button className="record-button-left" size={"large"}><Icon type="more" /></Button>
+                                <Button className="record-button-left" size={"large"}>
+                                    <Icon type="more" />
+                                </Button>
                             </Dropdown>
                         </Menu.Item>
                         <Menu.Item disabled  style={{float: "right"}}>
                             <Button className="record-button-right" type="primary" shape="round" size={"large"} onClick={this.  showRecordModal}>
-                                <img className="newRecord-icon" src="/assets/icon/plus.svg" />
+                                <img className="newRecord-icon" src="/assets/icon/Add.svg" />
                                 New Record
                             </Button>
                         </Menu.Item>

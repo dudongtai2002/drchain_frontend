@@ -32,6 +32,12 @@ export default class NavLeft extends React.Component {
                                 <span className="menu-content">Medical Record</span>
                             </NavLink>
                         </Menu.Item>
+                        <Menu.Item className="menu-divider" title="Vaccination" key="/vaccination">
+                            <NavLink className="link-style" to="/vaccination">
+                                <img className="navLeft-icon" src="/assets/icon/Vaccination.svg" alt="Vaccination"></img>
+                                <span className="menu-content">Vaccination</span>
+                            </NavLink>
+                        </Menu.Item>
                         <Menu.Item className="menu-divider" title="Wellness Data" key="/wellness">
                             <NavLink className="link-style" to="/wellness">
                                 <img className="navLeft-icon" src="/assets/icon/Data.svg" alt="data"></img>
@@ -42,7 +48,7 @@ export default class NavLeft extends React.Component {
                         <Menu.Item title="Account Setting" key="/account">
                             <NavLink className="link-style" to="/account">
                                 <img className="navLeft-icon" src="/assets/icon/Profile_Management.svg" alt="profile"></img>
-                                <span className="menu-content">Profile Management</span>
+                                <span className="menu-content">Profiles</span>
                             </NavLink>
                         </Menu.Item>
                         <Menu.Item title="Finance" key="/finance">
@@ -57,10 +63,10 @@ export default class NavLeft extends React.Component {
                                 <span className="menu-content">Settings</span>
                             </NavLink>
                         </Menu.Item>
-                        <Menu.Item title="To be decided" key="/blank2">
-                            <NavLink className="link-style" to="/blank2">
-                                <img className="navLeft-icon" src="/assets/icon/Settings.svg" alt="setting"></img>
-                                <span className="menu-content">To Be Decided</span>
+                        <Menu.Item title="Application" key="/application">
+                            <NavLink className="link-style" to="/application">
+                                <img className="navLeft-icon" src="/assets/icon/Applications.svg" alt="Application"></img>
+                                <span className="menu-content">Application</span>
                             </NavLink>
                         </Menu.Item>
                     </Menu>

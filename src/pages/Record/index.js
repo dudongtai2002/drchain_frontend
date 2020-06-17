@@ -352,7 +352,7 @@ export default class Record extends React.Component {
                         align= {"left"}
                         rowSelection={rowSelection}
                         rowClassName = {(record, index) => 'table-row-style'}
-                        pagination={{ pageSize: 7 }}
+                        pagination={{ pageSize: 8 }}
                     />
                 </Card>
             </div>
