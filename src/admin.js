@@ -22,10 +22,10 @@ export default class Admin extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col span="4">
+                    <Col xs={8} sm={7} md={6} lg={5} xl={4}>
                         <NavLeft />
                     </Col>
-                    <Col span="20">
+                    <Col xs={16} sm={17} md={18} lg={19} xl={20}>
                         {this.props.children}
                     </Col>
                 </Row>

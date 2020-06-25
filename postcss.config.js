@@ -5,15 +5,15 @@ module.exports = {
             viewportWidth: 1920,
             unitPrecision: 5,
             propList: ['*'],
-            viewportUnit: 'vw',
-            fontViewportUnit: 'vw',
+            viewportUnit: 'rem',
+            fontViewportUnit: 'rem',
             selectorBlackList: [],
             minPixelValue: 1,
             mediaQuery: false,
             replace: true,
             exclude: [],
             landscape: false,
-            landscapeUnit: 'vw',
+            landscapeUnit: 'rem',
             landscapeWidth: 568
         }
     }
