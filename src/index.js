@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Router from './router'
+import Promotion from './pages/Promotion/index'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router/ >,
+  <Router/>,
   document.getElementById('root')
 );
 
