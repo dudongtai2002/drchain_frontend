@@ -290,7 +290,7 @@ export default class Record extends React.Component {
               key: 'Date',
               onCell: (record) => ({
                   onClick: ()=>{
-                    window.location.href = '/#/details';
+                    window.location.href = '/#/dashBoard/details';
                   }
               })
             },
@@ -300,7 +300,7 @@ export default class Record extends React.Component {
               key: 'Department',
               onCell: (record) => ({
                 onClick: ()=>{
-                  window.location.href = '/#/details';
+                  window.location.href = '/#/dashBoard/details';
                 }
               }),
               ...this.getColumnSearchProps('Department'),
@@ -312,7 +312,7 @@ export default class Record extends React.Component {
                 key: 'Provider',
                 onCell: (record) => ({
                     onClick: ()=>{
-                      window.location.href = '/#/details';
+                      window.location.href = '/#/dashBoard/details';
                     }
                   }),
                 ...this.getColumnSearchProps('Provider')
@@ -323,7 +323,7 @@ export default class Record extends React.Component {
                 key: 'Clinic',
                 onCell: (record) => ({
                     onClick: ()=>{
-                      window.location.href = '/#/details';
+                      window.location.href = '/#/dashBoard/details';
                     }
                   }),
                 ...this.getColumnSearchProps('Clinic')
@@ -334,7 +334,7 @@ export default class Record extends React.Component {
                 key: 'Dept_Phone',
                 onCell: (record) => ({
                     onClick: ()=>{
-                      window.location.href = '/#/details';
+                      window.location.href = '/#/dashBoard/details';
                     }
                   }),
             },

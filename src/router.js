@@ -7,6 +7,7 @@ import Details from './pages/Details/index'
 import Wellness from './pages/Wellness/index'
 import Account from './pages/Account/index'
 import Promotion from './pages/Promotion/index'
+import Vaccination from './pages/Vaccination/router'
 
 export default class IRouter extends React.Component {
 
@@ -23,6 +24,7 @@ export default class IRouter extends React.Component {
                                     <Route path='/dashBoard/details' component={Details}></Route>
                                     <Route path='/dashBoard/wellness' component={Wellness}></Route>
                                     <Route path='/dashBoard/account' component={Account}></Route>
+                                    <Route path='/dashBoard/vaccination' component={Vaccination}></Route>
                                 </Switch>
                             </Admin>
                         }></Route>

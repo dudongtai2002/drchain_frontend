@@ -64,7 +64,7 @@ export default class HeaderForm extends React.Component{
                 confirmRecordLoading: false,
             });
             message.success("You files have been successfully uploaded.");
-            window.location.href = '/#/details';
+            window.location.href = '/#/dashBoard/details';
         }, 1000);
     }
     handleRecordCancel = () => {
