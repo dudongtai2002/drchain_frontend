@@ -1755,6 +1755,14 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/hoist-non-react-statics@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -2329,6 +2337,66 @@ antd@3.26.16:
     shallowequal "^1.1.0"
     warning "~4.0.3"
 
+antd@^3.16.6:
+  version "3.26.18"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-3.26.18.tgz#541e26a6865dd20e5d192027c45599b963146e67"
+  integrity sha512-TPuacNJJNPji+LnapU46uWGqi+6JlyH75paMNs95IH0F7gGYtp4oSkua88gGsoAaUbDxTIF+cWI9mdIsr7ywlw==
+  dependencies:
+    "@ant-design/create-react-context" "^0.2.4"
+    "@ant-design/icons" "~2.1.1"
+    "@ant-design/icons-react" "~2.0.1"
+    "@types/react-slick" "^0.23.4"
+    array-tree-filter "^2.1.0"
+    babel-runtime "6.x"
+    classnames "~2.2.6"
+    copy-to-clipboard "^3.2.0"
+    css-animation "^1.5.0"
+    dom-closest "^0.2.0"
+    enquire.js "^2.1.6"
+    is-mobile "^2.1.0"
+    lodash "^4.17.13"
+    moment "^2.24.0"
+    omit.js "^1.0.2"
+    prop-types "^15.7.2"
+    raf "^3.4.1"
+    rc-animate "^2.10.2"
+    rc-calendar "~9.15.7"
+    rc-cascader "~0.17.4"
+    rc-checkbox "~2.1.6"
+    rc-collapse "~1.11.3"
+    rc-dialog "~7.6.0"
+    rc-drawer "~3.1.1"
+    rc-dropdown "~2.4.1"
+    rc-editor-mention "^1.1.13"
+    rc-form "^2.4.10"
+    rc-input-number "~4.5.0"
+    rc-mentions "~0.4.0"
+    rc-menu "~7.5.1"
+    rc-notification "~3.3.1"
+    rc-pagination "~1.20.11"
+    rc-progress "~2.5.0"
+    rc-rate "~2.5.0"
+    rc-resize-observer "^0.1.0"
+    rc-select "~9.2.0"
+    rc-slider "~8.7.1"
+    rc-steps "~3.5.0"
+    rc-switch "~1.9.0"
+    rc-table "~6.10.5"
+    rc-tabs "~9.7.0"
+    rc-time-picker "~3.7.1"
+    rc-tooltip "~3.7.3"
+    rc-tree "~2.1.0"
+    rc-tree-select "~2.9.1"
+    rc-trigger "^2.6.2"
+    rc-upload "~2.9.1"
+    rc-util "^4.16.1"
+    react-lazy-load "^3.0.13"
+    react-lifecycles-compat "^3.0.4"
+    react-slick "~0.25.2"
+    resize-observer-polyfill "^1.5.1"
+    shallowequal "^1.1.0"
+    warning "~4.0.3"
+
 anymatch@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-2.0.0.tgz#bcb24b4f37934d9aa7ac17b4adaf89e7c76ef2eb"
@@ -2452,7 +2520,7 @@ arrify@^1.0.1:
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
   integrity sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
 
-asap@~2.0.3, asap@~2.0.6:
+asap@^2.0.6, asap@~2.0.3, asap@~2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=
@@ -4303,6 +4371,15 @@ dir-glob@2.0.0:
   dependencies:
     arrify "^1.0.1"
     path-type "^3.0.0"
+
+dnd-core@^7.7.0:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/dnd-core/-/dnd-core-7.7.0.tgz#3166aefc8c5b85ca4ade4ae836712a3108975fab"
+  integrity sha512-+YqwflWEY1MEAEl2QiEiRaglYkCwIZryyQwximQGuTOm/ns7fS6Lg/i7OCkrtjM10D5FhArf/VUHIL4ZaRBK0g==
+  dependencies:
+    asap "^2.0.6"
+    invariant "^2.2.4"
+    redux "^4.0.1"
 
 dns-equal@^1.0.0:
   version "1.0.0"
@@ -6167,7 +6244,7 @@ internal-slot@^1.0.2:
     has "^1.0.3"
     side-channel "^1.0.2"
 
-invariant@^2.2.2, invariant@^2.2.4:
+invariant@^2.1.0, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -7484,6 +7561,11 @@ lru-cache@^5.1.1:
   integrity sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
   dependencies:
     yallist "^3.0.2"
+
+luxon@^1.21.3:
+  version "1.24.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.24.1.tgz#a8383266131ed4eaed4b5f430f96f3695403a52a"
+  integrity sha512-CgnIMKAWT0ghcuWFfCWBnWGOddM0zu6c4wZAWmD0NN7MZTnro0+833DF6tJep+xlxRPg4KtsYEHYLfTMBQKwYg==
 
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
@@ -10045,6 +10127,20 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+react-big-scheduler@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/react-big-scheduler/-/react-big-scheduler-0.2.7.tgz#22a378fd3c5d2e411df0b6117f164e519d8dbe54"
+  integrity sha512-tbYWsfqO+c0C3SA7e3fJMphaeH5UYYH+ZVpzLis7hnZUlifEUVndFaPolBoxpfRlB0jsYiiEnSFwzXmTr/UJjA==
+  dependencies:
+    antd "^3.16.6"
+    moment "^2.24.0"
+    prop-types "^15.7.2"
+    react "^16.8.6"
+    react-dnd "^7.4.5"
+    react-dnd-html5-backend "^7.4.4"
+    react-dom "^16.8.6"
+    rrule "^2.6.0"
+
 react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -10075,7 +10171,25 @@ react-dev-utils@^10.2.1:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dom@^16.13.1:
+react-dnd-html5-backend@^7.4.4:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-7.7.0.tgz#e2b8ea61a1bc34ba743b89cafcda6213b006c06a"
+  integrity sha512-JgKmWOxqorFyfGPeWV+SAPhVGFe6+LrOR24jETE9rrYZU5hCppzwK9ujjS508kWibeDvbfEgi9j5qC2wB1/MoQ==
+  dependencies:
+    dnd-core "^7.7.0"
+
+react-dnd@^7.4.5:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-7.7.0.tgz#9d983331ecf87ba33d058d861e6ca9adb8253a2e"
+  integrity sha512-anpJDKMgdXE6kXvtBFmIAe1fuaexpVy7meUyNjiTfCnjQ1mRvnttGTVvcW9fMKijsUQYadiyvzd3BRxteFuVXg==
+  dependencies:
+    "@types/hoist-non-react-statics" "^3.3.1"
+    dnd-core "^7.7.0"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.1.0"
+    shallowequal "^1.1.0"
+
+react-dom@^16.13.1, react-dom@^16.8.6:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -10238,7 +10352,7 @@ react-slick@~0.25.2:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react@^16.13.1:
+react@^16.13.1, react@^16.8.6:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -10352,6 +10466,14 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
+
+redux@^4.0.1:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.5.tgz#4db5de5816e17891de8a80c424232d06f051d93f"
+  integrity sha512-VSz1uMAH24DM6MF72vcojpYPtrTUu3ByVWfPL1nPfVRb5mZVTve5GnNCUV53QM/BZ66xfWrm0CTWoM+Xlz8V1w==
+  dependencies:
+    loose-envify "^1.4.0"
+    symbol-observable "^1.2.0"
 
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
@@ -10726,6 +10848,15 @@ rollup@^0.25.8:
     chalk "^1.1.1"
     minimist "^1.2.0"
     source-map-support "^0.3.2"
+
+rrule@^2.6.0:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/rrule/-/rrule-2.6.4.tgz#7f4f31fda12bc7249bb176c891109a9bc448e035"
+  integrity sha512-sLdnh4lmjUqq8liFiOUXD5kWp/FcnbDLPwq5YAc/RrN6120XOPb86Ae5zxF7ttBVq8O3LxjjORMEit1baluahA==
+  dependencies:
+    tslib "^1.10.0"
+  optionalDependencies:
+    luxon "^1.21.3"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -11598,7 +11729,7 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-symbol-observable@^1.0.4:
+symbol-observable@^1.0.4, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
