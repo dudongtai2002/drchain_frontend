@@ -10,25 +10,57 @@ export default class Admin extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: 280,
+            width: 0,
+            height: 0,
+            windowDimension: ""
         };
     }
     render() {
         return (
             <div>
-                <Row>
-                    <Col span="24">
-                        <Header />
-                    </Col>
+                <Layout>
+                    <Header>
+                        <Row>
+                            <Header />
+                        </Row>
+                    </Header>
+                    <Layout>
+                        <Sider
+                            breakpoint="lg"
+                            width="300px"
+                            collapsedWidth="0"
+                            onBreakpoint={broken => {
+                            console.log(broken);
+                            }}
+                            onCollapse={(collapsed, type) => {
+                            console.log(collapsed, type);
+                            }}
+                           
+                        >
+                            <NavLeft/>
+                        </Sider>
+                        <Content>
+                            <Col span="24" className="main">
+                                <Row>
+                                {this.props.children}
+                                </Row>
+                            </Col>
+                        </Content>
+                    </Layout>
+                </Layout>
+                {/* <Row className="header">
+                    <Header />
                 </Row>
-                <Row>
-                    <Col xs={9} sm={9} md={6} lg={5} xl={4}>
+                <Row className="container">
+                    <Col span="4" className="nav-left">
                         <NavLeft />
                     </Col>
-                    <Col xs={15} sm={15} md={18} lg={19} xl={20}>
-                        {this.props.children}
+                    <Col span="20" className="main">
+                        <Row>
+                            {this.props.children}
+                        </Row>
                     </Col>
-                </Row>
+                </Row> */}
             </div>
         );
     }

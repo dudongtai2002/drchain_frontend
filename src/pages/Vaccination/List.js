@@ -1,5 +1,5 @@
 import React from 'react'
-import {Row, Col, Menu, Dropdown, Icon, Divider, Button, Table, Input} from 'antd'
+import {Row, Col, Menu, Dropdown, Icon, Divider, Button, Table, Input, Card} from 'antd'
 import './List.less'
 
 export default class List extends React.Component {
@@ -204,60 +204,63 @@ export default class List extends React.Component {
         ];
         return (
             <div className="vaccination-list-style">
-                <Row justify={"space-between"} className="vaccination-list">
-                    <Col className="vaccination-list-card" span={16}>
-                        <div className="vaccination-list-function">
-                            <div className="vaccination-list-function-left">
-                                <Dropdown overlay={userList} trigger={['click']}>
-                                    <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                        Untitled List<Icon type="down" />
-                                    </a>
-                                </Dropdown>,
+                <Row gutter={20} className="vaccination-list">
+                    <Col xs={24} sm={24} md={24} lg={24} xl={16} xxl={16}>
+                        <Card>
+                            <div className="vaccination-list-function">
+                                <div className="vaccination-list-function-left">
+                                    <Dropdown overlay={userList} trigger={['click']}>
+                                        <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                            Untitled List<Icon type="down" />
+                                        </a>
+                                    </Dropdown>,
+                                </div>
+                                <div className="vaccination-list-function-right">
+                                    <Button>Create New List</Button>
+                                    <Divider className="vaccination-list-function-divider" type="vertical" />
+                                    <Button>Delete</Button>
+                                    <Divider className="vaccination-list-function-divider" type="vertical" />
+                                    <Button>Export</Button>
+                                </div>
                             </div>
-                            <div className="vaccination-list-function-right">
-                                <Button>Create New List</Button>
-                                <Divider className="vaccination-list-function-divider" type="vertical" />
-                                <Button>Delete</Button>
-                                <Divider className="vaccination-list-function-divider" type="vertical" />
-                                <Button>Export</Button>
+                            <div className="vaccination-list-filter">
+                                <Button shape="circle"><img src="/assets/icon/Filter2.svg"></img></Button>
                             </div>
-                        </div>
-                        <div className="vaccination-list-filter">
-                            <Button shape="circle"><img src="/assets/icon/Filter2.svg"></img></Button>
-                        </div>
-                        <div className="vaccination-list-table">
-                            <Table 
-                                columns={userListColumns} 
-                                dataSource={requestedListData} 
-                                pagination={false}
-                                rowClassName = {(record, index) => 'vaccination-list-table-row-style'}
-                            />
-                        </div>
-                        <div className="vaccination-list-add">
-                            <Button shape="circle">
-                                <img src="/assets/icon/Add2.svg"/>
-                            </Button>
-                        </div>
+                            <div className="vaccination-list-table">
+                                <Table 
+                                    columns={userListColumns} 
+                                    dataSource={requestedListData} 
+                                    pagination={false}
+                                    rowClassName = {(record, index) => 'vaccination-list-table-row-style'}
+                                />
+                            </div>
+                            <div className="vaccination-list-add">
+                                <Button shape="circle">
+                                    <img src="/assets/icon/Add2.svg"/>
+                                </Button>
+                            </div>
+                        </Card>
                     </Col>
-                    <Col span={1}></Col>
-                    <Col className="vaccination-record vaccination-list-card" span={7}>
-                        <div className="vaccination-record-title">
-                            My Record
-                        </div>
-                        <div className="vaccination-record-search">
-                            <Input className="vaccination-record-search-input"/>
-                            <Button shape="circle">
-                                <img src="/assets/icon/Search.svg"/>
-                            </Button>
-                        </div>
-                        <div className="vaccination-record-table">
-                            <Table 
-                                columns={userRecordColumns} 
-                                dataSource={requestedRecordData} 
-                                pagination={true}
-                                rowClassName = {(record, index) => 'vaccination-record-table-row-style'}
-                            />
-                        </div>
+                    <Col className="vaccination-record"  xs={24} sm={24} md={24} lg={24} xl={8} xxl={8}>
+                        <Card>
+                            <div className="vaccination-record-title">
+                                My Record
+                            </div>
+                            <div className="vaccination-record-search">
+                                <Input className="vaccination-record-search-input"/>
+                                <Button shape="circle">
+                                    <img src="/assets/icon/Search.svg"/>
+                                </Button>
+                            </div>
+                            <div className="vaccination-record-table">
+                                <Table 
+                                    columns={userRecordColumns} 
+                                    dataSource={requestedRecordData} 
+                                    pagination={true}
+                                    rowClassName = {(record, index) => 'vaccination-record-table-row-style'}
+                                />
+                            </div>
+                        </Card>
                     </Col>
                 </Row>
             </div>
