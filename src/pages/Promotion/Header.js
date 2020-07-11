@@ -21,7 +21,6 @@ export default class Header extends React.Component {
                     <Menu.Item className="promotion-header-item">Subscriptions</Menu.Item>
                     <Menu.Item className="promotion-header-item">Partners</Menu.Item>
                     <Menu.Item className="promotion-header-item">Support</Menu.Item>
-
                     <Menu.Item className="promotion-header-right">
                         <Avatar  src="https://picsum.photos/200" />
                         <span className="header-user-icon" >Lawrence Liu</span>
