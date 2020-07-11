@@ -12,6 +12,12 @@ export default class Footer extends React.Component {
             <Col className="footer">
                 <div>
                     <ul>
+                        <li className="logo-title">Dr.Chain</li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <ul>
                         <li className="title">PRODUCT</li>
                         <li>Features</li>
                         <li>Enterprise</li>

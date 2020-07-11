@@ -89,49 +89,49 @@ export default class Content extends React.Component {
                     <Col xs={4} sm={4} md={3} lg={4} xl={5} xxl={6}></Col>
                 </Row>
                 <Row className="part8" gutter={83}>
-                    <Col xs={1} sm={1} md={1} lg={3} xl={3} xxl={5}></Col>
-                    <Col xs={11} sm={11} md={11} lg={9} xl={9} xxl={7}>
+                    <Col xs={0} sm={0} md={0} lg={3} xl={3} xxl={5}></Col>
+                    <Col xs={24} sm={24} md={24} lg={9} xl={9} xxl={7}>
                         <Card bordered={false}>
                             <div className="part8-text-title">Never Miss One Health Service</div>
                             <div className="part8-text-content">With a calendar to integrate. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
                         </Card>
                     </Col>
-                    <Col xs={11} sm={11} md={11} lg={9} xl={9} xxl={7}>
+                    <Col xs={24} sm={24} md={24} lg={9} xl={9} xxl={7}>
                         <Card bordered={false}>
                             <img src="/assets/images/calender.png"/>
                         </Card>
                     </Col>
-                    <Col xs={1} sm={1} md={1} lg={3} xl={3} xxl={5}></Col>
+                    <Col xs={0} sm={0} md={0} lg={3} xl={3} xxl={5}></Col>
                 </Row>
                 <Row className="part9" gutter={83}>
-                    <Col xs={1} sm={1} md={1} lg={3} xl={3} xxl={5}></Col>
-                    <Col xs={11} sm={11} md={11} lg={9} xl={9} xxl={7}>
+                    <Col xs={0} sm={0} md={0} lg={3} xl={3} xxl={5}></Col>
+                    <Col xs={24} sm={24} md={24} lg={9} xl={9} xxl={7}>
                         <Card bordered={false}>
                             <img src="/assets/images/wellness.png"/>
                         </Card>
                     </Col>
-                    <Col xs={11} sm={11} md={11} lg={9} xl={9} xxl={7}>
+                    <Col xs={24} sm={24} md={24} lg={9} xl={9} xxl={7}>
                         <Card bordered={false}>
                             <div className="part9-text-title">Intagrate Your Health Data in One Platform</div>
                             <div className="part9-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
                         </Card>
                     </Col>
-                    <Col xs={1} sm={1} md={1} lg={3} xl={3} xxl={5}></Col>
+                    <Col xs={0} sm={0} md={0} lg={3} xl={3} xxl={5}></Col>
                 </Row>
                 <Row className="part10" gutter={83}>
-                    <Col xs={1} sm={1} md={1} lg={3} xl={3} xxl={5}></Col>
-                    <Col xs={11} sm={11} md={11} lg={9} xl={9} xxl={7}>
+                    <Col xs={0} sm={0} md={0} lg={3} xl={3} xxl={5}></Col>
+                    <Col xs={24} sm={24} md={24} lg={9} xl={9} xxl={7}>
                         <Card bordered={false}>
                             <div className="part10-text-title">Family-shared Health Management</div>
                             <div className="part10-text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
                         </Card>
                     </Col>
-                    <Col xs={11} sm={11} md={11} lg={9} xl={9} xxl={7}>
+                    <Col xs={24} sm={24} md={24} lg={9} xl={9} xxl={7}>
                         <Card bordered={false}>
                             <img src="/assets/images/profile.png"/>
                         </Card>
                     </Col>
-                    <Col xs={1} sm={1} md={1} lg={3} xl={3} xxl={5}></Col>
+                    <Col xs={0} sm={0} md={0} lg={3} xl={3} xxl={5}></Col>
                 </Row>
                 <Row className="part5">
                     <div className="part5-header">- Our Offerings -</div>
