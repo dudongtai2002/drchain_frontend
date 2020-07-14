@@ -1,0 +1,48 @@
+.vaccination-calendar-card{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.vaccination-calendar{
+    margin: 18px 80px 0 80px;
+
+    .card-title {
+        height: 60px;
+        padding:20px 25px 20px 25px;
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: bold;
+        color: #5789DB;
+    }
+
+    .vaccination-list{
+        .vaccination-list-item{
+            margin: 15px 30px;
+            padding-left: 30px;
+            padding-right: 15px;
+            border: 1px solid #e8e8e8;
+            border-radius: 10px;
+            position: relative;
+
+            .vaccination-title{
+                font-size: 14px;
+                color: #5789DB;
+            }
+
+            .status-indicator{
+                width: 15px;
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                position: absolute;
+                border-radius: 10px 0 0 10px;
+            }
+            .todo-ind{
+                background-color: #ffd000;
+            }
+            .missed-ind{
+                background-color: #ec5051;
+            }
+        }
+    }
+}
