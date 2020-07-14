@@ -1,97 +1,162 @@
 import React from 'react'
-import {DragDropContext} from 'react-dnd'
-import HTML5Backend from 'react-dnd-html5-backend'
-import {Row, Col, List, Icon} from 'antd'
-import moment from 'moment'
-import Scheduler, {SchedulerData, ViewTypes, CellUnits, DATE_FORMAT} from 'react-big-scheduler'
-import 'react-big-scheduler/lib/css/style.css'
+import { Row, Col, List, Icon } from 'antd'
+import Scheduler from '../../components/Scheduler'
 import './Calendar.less'
 
 let resources = [
     {
         id: 'r0',
-        name: 'Influenza'
+        name: 'Influenza',
+        color: '#b0c9ff'
     },
     {
         id: 'r1',
-        name: 'LAIV'
+        name: 'LAIV',
+        color: '#b0c9ff'
     },
     {
         id: 'r2',
-        name: 'Pneumococcal'
+        name: 'Pneumococcal',
+        color: '#b0c9ff'
     },
     {
         id: 'r3',
-        name: 'Polio'
+        name: 'Polio',
+        color: '#b0c9ff'
     },
     {
         id: 'r4',
-        name: 'MMR'
+        name: 'MMR',
+        color: '#b0c9ff'
     },
     {
         id: 'r5',
-        name: 'Varicella'
+        name: 'Varicella',
+        color: '#ffc3bb'
     },
     {
         id: 'r6',
-        name: 'HepA'
+        name: 'HepA',
+        color: '#b0c9ff'
     },
     {
         id: 'r7',
-        name: 'Tdap'
+        name: 'Tdap',
+        color: '#99dee2'
     },
     {
         id: 'r8',
-        name: 'HPV'
+        name: 'HPV',
+        color: '#ffe3a0'
     },
     {
         id: 'r9',
-        name: 'MenACWY'
+        name: 'MenACWY',
+        color: '#b0c9ff'
     },
 ];
 //the event array should be sorted in ascending order by event.start property, otherwise there will be some rendering errors
 let events = [
     {
-         id: 1,
-         start: '2017-12-18 09:30:00',
-         end: '2017-12-19 23:30:00',
-         resourceId: 'r1',
-         title: 'I am finished',
-         bgColor: '#D9D9D9'
-     },
-     {
-         id: 2,
-         start: '2017-12-18 12:30:00',
-         end: '2017-12-26 23:30:00',
-         resourceId: 'r2',
-         title: 'I am not resizable',
-         resizable: false
-     },
-     {
-         id: 3,
-         start: '2017-12-19 12:30:00',
-         end: '2017-12-20 23:30:00',
-         resourceId: 'r3',
-         title: 'I am not movable',
-         movable: false
-     },
-     {
-         id: 4,
-         start: '2017-12-19 14:30:00',
-         end: '2017-12-20 23:30:00',
-         resourceId: 'r1',
-         title: 'I am not start-resizable',
-         startResizable: false
-     },
-     {
-         id: 5,
-         start: '2017-12-19 15:30:00',
-         end: '2017-12-20 23:30:00',
-         resourceId: 'r2',
-         title: 'R2 has recurring tasks every week on Tuesday, Friday',
-         rrule: 'FREQ=WEEKLY;DTSTART=20171219T013000Z;BYDAY=TU,FR',
-         bgColor: '#f759ab'
-     }
+        id: 'e0',
+        start: '2015-03-18 09:30:00',
+        end: '2015-10-18 23:30:00',
+        resourceId: 'r0',
+        tag: 'Single dose',
+        status: 'done',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e1',
+        start: '2016-03-18 09:30:00',
+        end: '2016-10-18 23:30:00',
+        resourceId: 'r0',
+        tag: 'Single dose',
+        status: 'done',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e2',
+        start: '2017-03-18 09:30:00',
+        end: '2017-10-18 23:30:00',
+        resourceId: 'r0',
+        tag: 'Single dose',
+        status: 'done',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e3',
+        start: '2018-03-18 09:30:00',
+        end: '2018-10-18 23:30:00',
+        resourceId: 'r0',
+        tag: 'Single dose',
+        status: 'done',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e4',
+        start: '2019-03-18 09:30:00',
+        end: '2019-10-18 23:30:00',
+        resourceId: 'r0',
+        tag: 'Single dose',
+        status: 'done',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e5',
+        start: '2020-03-18 09:30:00',
+        end: '2020-10-18 23:30:00',
+        resourceId: 'r0',
+        tag: 'Single dose',
+        status: 'todo',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e6',
+        start: '2017-03-18 09:30:00',
+        end: '2017-10-18 23:30:00',
+        resourceId: 'r5',
+        tag: 'Single dose',
+        status: 'done',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e7',
+        start: '2016-09-18 09:30:00',
+        end: '2020-11-18 23:30:00',
+        resourceId: 'r7',
+        tag: '1st dose',
+        status: 'todo',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e7',
+        start: '2017-06-18 09:30:00',
+        end: '2017-12-18 23:30:00',
+        resourceId: 'r8',
+        tag: '1st dose',
+        status: 'done',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
+    {
+        id: 'e7',
+        start: '2019-01-18 09:30:00',
+        end: '2020-03-18 23:30:00',
+        resourceId: 'r8',
+        tag: '2nd dose',
+        status: 'overdue',
+        provider: 'Steven Chen',
+        requirement: 'This vaccination is recommended'
+    },
 ];
 
 let todos = [
@@ -110,146 +175,21 @@ let todos = [
 ]
 
 class Calendar extends React.Component {
-    getCustomDate = (schedulerData, num, date = undefined) => {
-        const {viewType} = schedulerData;
-        let selectDate = schedulerData.startDate;
-        if(date != undefined)
-            selectDate = date;   
-    
-        let startDate = num === 0 ? selectDate : 
-            schedulerData.localeMoment(selectDate).add(num, 'months').format(DATE_FORMAT),
-            endDate = schedulerData.localeMoment(startDate).add(1, 'months').format(DATE_FORMAT),
-            cellUnit = CellUnits.Day;
-        if(viewType === ViewTypes.Custom1) {
-            let monday = schedulerData.localeMoment(selectDate).startOf('week').format(DATE_FORMAT);
-            startDate = num === 0 ? monday : schedulerData.localeMoment(monday).add(num, 'years').format(DATE_FORMAT);
-            endDate = schedulerData.localeMoment(startDate).add(1, 'weeks').endOf('week').format(DATE_FORMAT);
-            cellUnit = CellUnits.Day;
-        } else if(viewType === ViewTypes.Custom2) {
-            let firstDayOfMonth = schedulerData.localeMoment(selectDate).startOf('month').format(DATE_FORMAT);
-            startDate = num === 0 ? firstDayOfMonth : schedulerData.localeMoment(firstDayOfMonth).add(num, 'years').format(DATE_FORMAT);
-            endDate = schedulerData.localeMoment(startDate).add(1, 'months').endOf('month').format(DATE_FORMAT);
-            cellUnit = CellUnits.Day;
-        }
-            
-        return {
-            startDate,
-            endDate,
-            cellUnit
-        };
-    }
-    
-    isNonWorkingTime = (schedulerData, time) => {
-        const { localeMoment } = schedulerData;
-        if(schedulerData.cellUnit === CellUnits.Hour){
-            let hour = localeMoment(time).hour();
-            if(hour < 1)
-                return true;
-        }
-        else {
-            let dayOfWeek = localeMoment(time).weekday();
-            if (dayOfWeek === 0 || dayOfWeek === 6)
-                return true;
-        }
-    
-        return false;
-    }
-
-    resizeScheduler = (e) => {
-        let schedulerData = this.state.schedulerData;
-        schedulerData.config.schedulerWidth = this.schedulerContainer.clientWidth
-        this.setState({
-            schedulerData: schedulerData
-        });
-    }
-
-    nonAgendaCellHeaderTemplateResolver = (schedulerData, item, formattedDateItems, style) => {
-        let datetime = schedulerData.localeMoment(item.time);
-        let isCurrentDate = false;
-  
-        if (schedulerData.viewType === ViewTypes.Day) {
-            isCurrentDate = datetime.isSame(new Date(), 'hour');
-        }
-        else {
-            isCurrentDate = datetime.isSame(new Date(), 'day');
-        }
-  
-        if (isCurrentDate) {
-            style.backgroundColor = '#118dea';
-            style.color = 'white';
-        }
-  
-        return (
-            <th key={item.time} className={`header3-text`} style={style}>
-                {
-                    formattedDateItems.map((formattedItem, index) => (
-                        <div key={index}
-                             dangerouslySetInnerHTML={{__html: formattedItem.replace(/[0-9]/g, '<b>$&</b>')}}/>
-                    ))
-                }
-            </th>
-        );
-    }
-
-    onScrollRight = (schedulerData, schedulerContent, maxScrollLeft) => {
-        schedulerData.next();
-        schedulerData.setEvents(events);
-        this.setState({
-            viewModel: schedulerData
-        });
-  
-        schedulerContent.scrollLeft = maxScrollLeft - 10;
-    }
-  
-    onScrollLeft = (schedulerData, schedulerContent, maxScrollLeft) => {
-        schedulerData.prev();
-        schedulerData.setEvents(events);
-        this.setState({
-            viewModel: schedulerData
-        });
-  
-        schedulerContent.scrollLeft = 10;
-    }
-    
-    constructor(props){
-        super(props);
-
-        let schedulerData = new SchedulerData(moment().format(DATE_FORMAT), ViewTypes.Custom, false, false, {
-            customCellWidth: 100,
-            views: [
-                {viewName: '< 18 Months', viewType: ViewTypes.Custom, showAgenda: false, isEventPerspective: false},
-                {viewName: '18 Months - 18 Years', viewType: ViewTypes.Custom1, showAgenda: false, isEventPerspective: false},
-                {viewName: '18 Years +', viewType: ViewTypes.Custom2, showAgenda: false, isEventPerspective: false},
-            ],
-        }, {
-            getCustomDateFunc: this.getCustomDate,
-            isNonWorkingTimeFunc: this.isNonWorkingTime
-        });
-        schedulerData.setResources(resources)
-        schedulerData.setEvents(events)
-        this.state = {
-            schedulerData: schedulerData
-        }
-    }
-    componentDidMount(){
-        this.resizeScheduler()
-        window.addEventListener("resize", this.resizeScheduler);
-    }
-
     render() {
         return (
             <div className="vaccination-calendar">
                 <Row type="flex" justify={"space-between"}>
                     <Col className="vaccination-calendar-card" xs={24} sm={24} md={24} lg={17} xl={18}>
                         <div className="vaccination-scheduler">
-                            <div ref={schedulerContainer => {this.schedulerContainer = schedulerContainer}}>
-                                <Scheduler 
-                                    schedulerData={this.state.schedulerData}
-                                    nonAgendaCellHeaderTemplateResolver = {this.nonAgendaCellHeaderTemplateResolver}
-                                    onScrollLeft={this.onScrollLeft}
-                                    onScrollRight={this.onScrollRight}
-                                />
-                            </div>
+                            <Scheduler
+                                resources={resources}
+                                events={events}
+                                cellUnit="1 year"
+                                calendarStart="10-10-2010"
+                                calendarEnd="10-10-2030"
+                                interval={1}
+                                unit="year"
+                            />
                         </div>
                     </Col>
                     <Col xs={0} sm={0} md={0} lg={1} xl={1}></Col>
@@ -262,9 +202,9 @@ class Calendar extends React.Component {
                             className="vaccination-list"
                             itemLayout="horizontal"
                             dataSource={todos}
-                            renderItem={item=>(
+                            renderItem={item => (
                                 <List.Item className="vaccination-list-item">
-                                    <div className={"status-indicator " + item.status +"-ind"} />
+                                    <div className={"status-indicator " + item.status + "-ind"} />
                                     <div className="vaccination-title">{item.name}</div>
                                     <Icon type="more" className="icon" />
                                 </List.Item>
@@ -272,9 +212,9 @@ class Calendar extends React.Component {
                         />
                     </Col>
                 </Row>
-            </div>     
+            </div>
         );
     }
 }
 
-export default DragDropContext(HTML5Backend)(Calendar)
+export default Calendar
