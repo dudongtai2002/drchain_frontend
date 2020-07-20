@@ -10,8 +10,8 @@ export default class Header extends React.Component {
                     <Col>
                         <Menu className = "menu" theme="light" mode="horizontal">
                             <Menu.Item>
-                                <img className="menu-logo-icon" src="/assets/DRCHAIN_LOGO.svg" alt="Logo"></img>
-                                <img className="menu-logo" src='/assets/DRCHAIN.svg' alt="Logo" />
+                                <img className="menu-logo-icon" src="/assets/logo.svg" alt="Logo"></img>
+                                <img className="menu-logo" src='/assets/wordLogo.svg' alt="Logo" />
                             </Menu.Item>
                             <Menu.Item className="menu-item">Explore</Menu.Item>
                             <Menu.Item className="menu-item">Help</Menu.Item>
