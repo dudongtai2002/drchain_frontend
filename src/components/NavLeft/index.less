@@ -2,7 +2,8 @@
     background-color: #5789DB;
     color: #ffffff;
     font-family: sans-serif;
-    height: calc(100vh);
+    height: calc(100vh - 67px);
+    overflow: hidden;
     .title {
         font-size: 26px;
         font-weight: bold;
@@ -45,8 +46,8 @@
         }
         .link-style {
             color: white;
+            font-weight: 600;
             font-size: 18px;
-            font-weight: bold;
             line-height: 21px;
             border: 0;
             text-align: left;
@@ -58,14 +59,17 @@
                 padding-left: 14px;
             }
             .navLeft-icon {
-                width:18px;
+                width:19px;
                 vertical-align: "top";
             }
         }
+        .menu-divider {
+            margin: 15px 0;
+        }
         .ant-divider-horizontal{
-            margin: 24px 27px;
-            width: 82%;
+            height: 0.5px;
             min-width: 50%;
+            background: rgba(255, 255, 255, 0.5);
         }
         .ant-menu-item {
             padding: 10px 27px;

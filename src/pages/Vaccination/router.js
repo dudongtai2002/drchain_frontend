@@ -13,8 +13,8 @@ export default class Vaccination extends React.Component {
             <HashRouter>
                 <Index>
                     <Switch>
-                        <Route path='/dashBoard/vaccination/list' component={List}></Route>
-                        <Route path='/dashBoard/vaccination/calendar' component={Calendar}></Route>
+                        <Route path='/user/vaccination/list' component={List}></Route>
+                        <Route path='/user/vaccination/calendar' component={Calendar}></Route>
                     </Switch>
                 </Index>
             </HashRouter>

@@ -2,6 +2,7 @@ import React from 'react'
 import {HashRouter, Route, Switch} from 'react-router-dom'
 import App from './App'
 import Admin from './admin'
+import Dashboard from './pages/Dashboard/index'
 import Record from './pages/Record/index'
 import Details from './pages/Details/index'
 import Wellness from './pages/Wellness/index'
@@ -15,16 +16,17 @@ export default class IRouter extends React.Component {
         return (
             <HashRouter>
                 <Switch>
-                <Route path="/dashBoard">
+                <Route path="/user">
                     <App>
-                        <Route path="/dashBoard" render={()=>
+                        <Route path="/user" render={()=>
                             <Admin>
                                 <Switch>
-                                    <Route path='/dashBoard/record' component={Record}></Route>
-                                    <Route path='/dashBoard/details' component={Details}></Route>
-                                    <Route path='/dashBoard/wellness' component={Wellness}></Route>
-                                    <Route path='/dashBoard/account' component={Account}></Route>
-                                    <Route path='/dashBoard/vaccination' component={Vaccination}></Route>
+                                    <Route path='/user/dashboard' component={Dashboard}></Route>
+                                    <Route path='/user/record' component={Record}></Route>
+                                    <Route path='/user/details' component={Details}></Route>
+                                    <Route path='/user/wellness' component={Wellness}></Route>
+                                    <Route path='/user/account' component={Account}></Route>
+                                    <Route path='/user/vaccination' component={Vaccination}></Route>
                                 </Switch>
                             </Admin>
                         }></Route>

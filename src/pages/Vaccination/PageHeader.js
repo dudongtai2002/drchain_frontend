@@ -30,10 +30,10 @@ export default class PageHeader extends React.Component {
                 <Row className="vaccination-function">
                     <div className="vaccination-function-switch">
                         <Button className={this.state.selected === "list"?"vaccination-function-switch-selected":null} shape="round" onClick={(e)=>this.handleViewSwitch("list",e)}>
-                            <NavLink to="/dashBoard/vaccination/list">Checklist</NavLink>
+                            <NavLink to="/user/vaccination/list">Checklist</NavLink>
                         </Button>
                         <Button className={this.state.selected === "calendar"?"vaccination-function-switch-selected":null} shape="round" onClick={(e)=>this.handleViewSwitch("calendar",e)}>
-                            <NavLink className="link-style" to="/dashBoard/vaccination/calendar">Calendar</NavLink>
+                            <NavLink className="link-style" to="/user/vaccination/calendar">Calendar</NavLink>
                         </Button>
                     </div>
                     <div className="vaccination-function-record">

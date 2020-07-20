@@ -3,6 +3,8 @@ import {Row, Col, Layout} from 'antd'
 
 import Header from './components/Header'
 import NavLeft from './components/NavLeft'
+
+import './admin.less'
 const {Sider, Content } = Layout;
 
 
@@ -17,7 +19,7 @@ export default class Admin extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div style={{overflow: 'hidden'}}>
                 <Layout>
                     <Header>
                         <Row>
@@ -27,7 +29,7 @@ export default class Admin extends React.Component {
                     <Layout>
                         <Sider
                             breakpoint="lg"
-                            width="300px"
+                            width="230px"
                             collapsedWidth="0"
                             onBreakpoint={broken => {
                             console.log(broken);
@@ -42,7 +44,11 @@ export default class Admin extends React.Component {
                         <Content>
                             <Col span="24" className="main">
                                 <Row>
-                                {this.props.children}
+                                    <Col span={1} />
+                                    <Col span={22}>
+                                        {this.props.children}
+                                    </Col>
+                                    <Col span={1}/>
                                 </Row>
                             </Col>
                         </Content>
