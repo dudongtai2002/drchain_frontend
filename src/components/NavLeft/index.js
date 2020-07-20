@@ -58,7 +58,7 @@ export default class NavLeft extends React.Component {
                         </Menu.Item>
                         <Menu.Item title="Finance" key="/finance">
                             <NavLink className="link-style" to="/user/finance">
-                                <img className="navLeft-icon" src="/assets/icon/finance.svg" alt="finance"></img>
+                                <img className="navLeft-icon" src="/assets/icon/fin.svg" alt="finance"></img>
                                 <span className="menu-content">Finance</span>
                                 <img style={{float:'right'}} src="/assets/icon/arrow_back.svg"></img>
                                 </NavLink>
