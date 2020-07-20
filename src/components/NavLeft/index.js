@@ -36,7 +36,7 @@ export default class NavLeft extends React.Component {
                         <Divider className="menu-divider"/>
                         <Menu.Item className="menu-divider" title="Vaccination" key="/vaccination/list">
                             <NavLink className="link-style" to="/user/vaccination/list">
-                                <img className="navLeft-icon" src="/assets/icon/vaccination.svg" alt="Vaccination"></img>
+                                <img className="navLeft-icon" src="/assets/icon/vaccine.svg" alt="Vaccination"></img>
                                 <span className="menu-content">Vaccination</span>
                                 <img style={{float:'right'}} src="/assets/icon/arrow_back.svg"></img>
                             </NavLink>
