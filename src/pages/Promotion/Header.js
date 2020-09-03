@@ -63,8 +63,8 @@ export default class Header extends React.Component {
                 <Row>
                     <Menu className = "promotion-header-menu" theme="light" mode='horizontal'>
                             <Menu.Item className="promotion-header-item">
-                                <img className="promotion-header-logo" src="/assets/drchain_logo.svg" alt="Logo"/>
-                                <img className="promotion-header-logo-word" src='/assets/Dr.chainlogo.svg' alt="Logo" />
+                                <img className="promotion-header-logo" src="/assets/logo.svg" alt="Logo"/>
+                                <img className="promotion-header-logo-word" src='/assets/wordLogo.svg' alt="Logo" />
                             </Menu.Item>
                             <Menu.Item className="promotion-header-item">Features</Menu.Item>
                             <Menu.Item className="promotion-header-item">Explore</Menu.Item>
